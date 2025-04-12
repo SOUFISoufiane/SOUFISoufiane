@@ -4,13 +4,13 @@
 
 ## 🧭 Navigation rapide
 
-- [Qui suis-je ?](#-qui-suis-je-)
-- [Objectifs professionnels](#-objectifs-professionnels)
-- [Parcours de formation](#-parcours-de-formation)
-- [Compétences & savoir-être](#-compétences--savoir-être)
-- [Projets techniques](#-projets-techniques)
-- [Galerie](#-galerie)
-- [Contact](#-contact)
+[![Qui suis-je ?](https://img.shields.io/badge/-Qui%20suis-je-%230a192f?style=for-the-badge&logoColor=white)](#-qui-suis-je-)
+[![Objectifs](https://img.shields.io/badge/-Objectifs%20pro-%230a192f?style=for-the-badge&logoColor=white)](#-objectifs-professionnels)
+[![Parcours](https://img.shields.io/badge/-Parcours-%230a192f?style=for-the-badge&logoColor=white)](#-parcours-de-formation)
+[![Compétences](https://img.shields.io/badge/-Compétences-%230a192f?style=for-the-badge&logoColor=white)](#-compétences--savoir-être)
+[![Projets](https://img.shields.io/badge/-Projets-%230a192f?style=for-the-badge&logoColor=white)](#-projets-techniques)
+[![Galerie](https://img.shields.io/badge/-Galerie-%230a192f?style=for-the-badge&logoColor=white)](#-galerie)
+[![Contact](https://img.shields.io/badge/-Contact-%230a192f?style=for-the-badge&logoColor=white)](#-contact)
 
 ---
 
