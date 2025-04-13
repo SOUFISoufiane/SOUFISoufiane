@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirection...</title>
+    <script>
+      const lang = navigator.language || navigator.userLanguage;
+      if (lang.startsWith('en')) {
+        window.location.href = './en/index_en.html';
+      } else {
+        window.location.href = './fr/index_fr.html'; // si tu as une version fr dans /fr/ ou sinon garde ./index_fr.html
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirection en cours...</p>
+  </body>
+</html>
