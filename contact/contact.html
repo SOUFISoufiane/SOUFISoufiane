@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Soufi Soufiane</title>
+  <style>
+    body {
+      background-color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+      color: #0a192f;
+    }
+    .banner {
+      background-color: #f0f0f0;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      border-left: 5px solid #0a192f;
+    }
+    h1 {
+      margin: 0;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-top: 1rem;
+      margin-bottom: 0.2rem;
+      font-weight: 600;
+    }
+    input, textarea {
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    button {
+      margin-top: 1.5rem;
+      background-color: #0a192f;
+      color: white;
+      padding: 0.7rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #1c2b4a;
+    }
+    .signature {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <h1>Me contacter</h1>
+  </div>
+
+  <p>Si vous souhaitez me contacter pour une opportunité, une question ou un projet, n'hésitez pas à m'envoyer un message via ce formulaire :</p>
+
+  <form action="https://formspree.io/f/xwpodpzo" method="POST">
+    <label for="name">Nom</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="message">Message</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+
+    <button type="submit">Envoyer</button>
+  </form>
+
+  <div class="signature">
+    Page conçue par Soufi Soufiane – Étudiant en BUT GEII, parcours Automatisme & Informatique Industrielle.
+  </div>
+</body>
+</html>
