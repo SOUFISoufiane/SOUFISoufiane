@@ -10,7 +10,7 @@
 [![Compétences](https://img.shields.io/badge/-Compétences-%23f72585?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://soufisoufiane.github.io/SOUFISoufiane/competences/)
 [![Projets](https://img.shields.io/badge/-Projets-%23fb5607?style=for-the-badge&logo=codeforces&logoColor=white)](https://soufisoufiane.github.io/SOUFISoufiane/projets)
 [![Galerie](https://img.shields.io/badge/Galerie-%231db954?style=for-the-badge&logo=pixabay&logoColor=white)](#-galerie)
-[![Contact](https://img.shields.io/badge/Contact-%233f3d56?style=for-the-badge&logo=gmail&logoColor=white)](#-contact)
+[![Contact](https://img.shields.io/badge/Contact-Form-%230a192f?style=for-the-badge&logo=minutemailer&logoColor=white)](https://soufisoufiane.github.io/SOUFISoufiane/contact)
 
 ---
 
