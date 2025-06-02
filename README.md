@@ -9,7 +9,7 @@
 [![Parcours](https://img.shields.io/badge/Parcours-%236a4c93?style=for-the-badge&logo=progress&logoColor=white)](#-parcours-de-formation)
 [![Compétences](https://img.shields.io/badge/-Compétences-%23f72585?style=for-the-badge&logo=geeksforgeeks&logoColor=white)](https://soufisoufiane.github.io/SOUFISoufiane/competences/)
 [![Projets](https://img.shields.io/badge/-Projets-%23fb5607?style=for-the-badge&logo=codeforces&logoColor=white)](https://soufisoufiane.github.io/SOUFISoufiane/projets)
-[![Galerie](https://img.shields.io/badge/Galerie-%231db954?style=for-the-badge&logo=pixabay&logoColor=white)](#-galerie)
+[![Galerie](https://img.shields.io/badge/Galerie-%231db954?style=for-the-badge&logo=pixabay&logoColor=white)](https://soufisoufiane.github.io/SOUFISoufiane/gallery/)
 [![Contact](https://img.shields.io/badge/Contact-%230a192f?style=for-the-badge&logo=minutemailer&logoColor=white)](https://soufisoufiane.github.io/SOUFISoufiane/contact)
 
 ---
