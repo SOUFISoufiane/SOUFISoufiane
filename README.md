@@ -16,7 +16,7 @@
 
 ## 👤 Qui suis-je ?
 
-Étudiant en BUT Génie Électrique et Informatique Industrielle (GEII) à l'IUT du Creusot, je suis en reconversion professionnelle avec l’objectif clair de devenir ingénieur en automatisation et robotique.  
+Étudiant en BUT Génie Électrique et Informatique Industrielle (GEII) à l'IUT du Creusot, je suis en reconversion professionnelle avec l’objectif de devenir ingénieur en automatisation et robotique.  
 Après plusieurs années dans un autre secteur, j’ai décidé de m’orienter vers un domaine technique, concret et porteur, en accord avec ma curiosité naturelle et mon envie d’apprendre.
 
 ---
@@ -59,26 +59,16 @@ Après plusieurs années dans un autre secteur, j’ai décidé de m’orienter 
 
 | Projet | Description | Technologies |
 |--------|-------------|--------------|
-| 🔗 [Robot PAMI](./projects/pami-robot) | Robot autonome dans un labyrinthe | Capteurs, moteurs, C embarqué |
-| 🔗 [Barrière Infrarouge](./projects/barriere-infrarouge) | Capteur + carte PCB réceptrice | TIL78, LM358, Multisim |
-| 🔗 [Ladder & GRAFCET](./projects/ladder-grafcet) | Logique automatisée simulée | GRAFCET, ladder |
+| 🔗 [Robot PAMI](https://soufisoufiane.github.io/SOUFISoufiane/projets) | Robot autonome dans un labyrinthe | Capteurs, moteurs, C embarqué |
+| 🔗 [Barrière Infrarouge](https://soufisoufiane.github.io/SOUFISoufiane/projets) | Capteur + carte PCB réceptrice | TIL78, LM358, Multisim |
+| 🔗 [Ladder & GRAFCET](https://soufisoufiane.github.io/SOUFISoufiane/projets) | Logique automatisée simulée | GRAFCET, ladder |
 
 ---
 
-## 🖼️ Galerie
-
-| Prototype | En action | Détails |
-|----------|-----------|---------|
-| ![](./assets/pami-small.gif) | ![](./assets/barriere.jpg) | ![](./assets/carte.jpg) |
-
-> *Cliquez sur les images pour les agrandir.*
-
----
-
-## 🤝 Contact
+## 🤝 [Contact](https://soufisoufiane.github.io/SOUFISoufiane/contact)
 
 - 💼 [LinkedIn](https://www.linkedin.com/in/soufi-soufiane) 
-- 📧 Soufiane_Soufi@etu.u-bourgogne.fr 
+- 📧 [Soufiane_Soufi@etu.u-bourgogne.fr](mailto:Soufiane_Soufi@etu.u-bourgogne.fr?subject=Contact%20depuis%20le%20portfolio)
 
 ---
 
