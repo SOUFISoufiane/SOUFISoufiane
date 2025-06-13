@@ -1,4 +1,4 @@
-# 👋 Bienvenue sur mon Portfolio GitHub – Automatisme & Ingénierie Industrielle
+# 👋 Bienvenue sur mon Portfolio – Automatisme & Ingénierie Industrielle
 
 ---
 
@@ -23,7 +23,7 @@ Après plusieurs années dans un autre secteur, j’ai décidé de m’orienter 
 
 ## 🎯 Objectifs professionnels
 
-- 💼 Obtenir une alternance de 24 mois dans le domaine de l’automatisation industrielle
+- 💼 Obtenir une alternance de 24 mois dans le domaine de l’automatisation industrielle (Obtenue)
 - 🔧 Travailler sur des projets d’automates, de supervision ou de développement embarqué
 - 🧠 Développer des compétences solides en programmation industrielle, robotique et conception de systèmes
 - 🚀 Évoluer vers un poste d’ingénieur en automatisation & robotique d’ici 5 ans
