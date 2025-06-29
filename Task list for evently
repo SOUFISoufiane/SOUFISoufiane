@@ -1,0 +1,18 @@
+# 🎯 AI Event App MVP Task Checklist
+
+## 🚀 Important & Urgent
+- [ ] Build conversational UI
+- [ ] Connect to AI backend (e.g., GPT)
+- [ ] Create prompt templates for event recommendations
+
+## 🌱 Important but Not Urgent
+- [ ] Build UI for selecting interests
+- [ ] Store selections locally
+- [ ] Format AI outputs into cards or list
+- [ ] Display event name, date, venue
+- [ ] Create single-page layout
+- [ ] Implement preferences menu
+
+## 🕒 Not Important but Urgent
+- [ ] Add thumbs up/down or comments
+- [ ] Store feedback locally or in a database
