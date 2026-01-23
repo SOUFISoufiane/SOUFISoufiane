@@ -41,8 +41,8 @@ Après plusieurs années dans un autre secteur, j’ai décidé de m’orienter 
 
 ## 📊 Progression
 
-<div style="width: 50%; max-width: 890px; height: auto; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-  <img src="./assets/gallery/Progression_50_percent.png" style="width: 50%; height: auto; object-fit: contain;" alt="Barre de progression">
+<div style="width: 35%; max-width: 890px; height: auto; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+  <img src="./assets/gallery/Progression_50_percent.png" style="width: 35%; height: auto; object-fit: contain;" alt="Barre de progression">
 </div>
 
 
