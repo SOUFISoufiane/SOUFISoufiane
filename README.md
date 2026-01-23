@@ -39,10 +39,12 @@ Après plusieurs années dans un autre secteur, j’ai décidé de m’orienter 
 |:-----:|:-----:|:-----:|:------:|:------:|:------:|
 | ✅    | ⏳     | ⏳     | ⏳      | ⏳      | ⏳      |
 
+## 📊 Progression
 
-![Progression](<div style="width: 100%; max-width: 890px; height: auto; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-  <img src="./assets/gallery/Progression_50_percent.png" style="width: 100%; height: auto; object-fit: contain;" alt="Barre de progression">
-</div>)
+<div style="width: 50%; max-width: 890px; height: auto; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+  <img src="./assets/gallery/Progression_50_percent.png" style="width: 50%; height: auto; object-fit: contain;" alt="Barre de progression">
+</div>
+
 
 📍 Actuellement en fin de 1ère année – **50% du parcours accompli**
 
