@@ -41,7 +41,7 @@ Après plusieurs années dans un autre secteur, j’ai décidé de m’orienter 
 
 ![Progression](./assets/progression_16_percent.png)
 
-📍 Actuellement en fin de 1ère année – **16% du parcours accompli**
+📍 Actuellement en fin de 1ère année – **50% du parcours accompli**
 
 ---
 
