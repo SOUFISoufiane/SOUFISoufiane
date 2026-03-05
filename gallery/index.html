@@ -4,130 +4,56 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Galerie | Soufi Soufiane</title>
+  <link rel="icon" type="image/png" href="../assets/logo_ss.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
-  <style>
-    body {
-      background-color: #ffffff;
-      color: #0a192f;
-      font-family: 'Segoe UI', sans-serif;
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .banner {
-      background-color: #f0f0f0;
-      padding: 1rem;
-      margin-bottom: 2rem;
-      border-left: 5px solid #0a192f;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .banner img {
-      height: 45px;
-    }
-    h2 {
-      margin-top: 3rem;
-      margin-bottom: 1rem;
-      border-left: 4px solid #0a192f;
-      padding-left: 0.5rem;
-    }
-    .glider-contain {
-      margin-bottom: 2rem;
-      position: relative;
-    }
-    .glider img {
-      max-height: 220px;
-      max-width: 100%;
-      height: auto;
-      width: auto;
-      border-radius: 8px;
-      margin: 0 0.5rem;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-    .glider-prev, .glider-next {
-      background-color: #0a192f;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      font-size: 1.2rem;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      z-index: 10;
-      cursor: pointer;
-    }
-    .glider-prev { left: -50px; }
-    .glider-next { right: -50px; }
-    .glider-track {
-      display: flex;
-      align-items: center;
-    }
-    .glider-dots {
-      text-align: center;
-      margin-top: 10px;
-    }
-    .glider-dot {
-      display: inline-block;
-      width: 10px;
-      height: 10px;
-      background-color: #ccc;
-      border-radius: 50%;
-      margin: 0 5px;
-      cursor: pointer;
-    }
-    .glider-dot.active {
-      background-color: #0a192f;
-    }
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0,0,0,0.8);
-      justify-content: center;
-      align-items: center;
-    }
-    .modal img {
-      max-width: 90%;
-      max-height: 90%;
-    }
-  </style>
+  <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-  <div class="banner" style="background-color: #f0f0f0; padding: 1rem; border-left: 5px solid #0a192f;">
-  <a href="https://soufisoufiane.github.io/SOUFISoufiane/">
-    <img src="../assets/logo_ss.png" alt="SS Logo" style="height: 45px; float: left; margin-right: 1rem;" />
-  </a>
-    <h1 style="margin-left: 0px;">Galerie</h1>
-  </div>
-
-  <div class="glider-contain">
-    <button class="glider-prev">❮</button>
-    <div class="glider">
-      <img src="../assets/gallery/Img1%20(1).jpeg" alt="image 1">
-      <img src="../assets/gallery/Img1%20(2).jpeg" alt="image 2">
-      <img src="../assets/gallery/Img1%20(3).jpeg" alt="image 3">
-      <img src="../assets/gallery/Img1%20(4).jpeg" alt="image 4">
-      <img src="../assets/gallery/Img1%20(5).jpeg" alt="image 5">
-      <img src="../assets/gallery/Img1%20(6).jpeg" alt="image 6">
-      <img src="../assets/gallery/Img1%20(7).jpeg" alt="image 7">
-      <img src="../assets/gallery/Img1%20(8).jpeg" alt="image 8">
-      <img src="../assets/gallery/Projet tutoré PAMI.jpeg" alt="image 9">
+  <header>
+    <div class="header-inner wide">
+      <a href="https://soufisoufiane.github.io/SOUFISoufiane/">
+        <img src="../assets/logo_ss.png" alt="SS Logo">
+      </a>
+      <h1>Galerie</h1>
     </div>
-    <button class="glider-next">❯</button>
-    <div class="glider-dots"></div>
-  </div>
+  </header>
 
-  <div class="modal" id="modal">
-    <img id="modal-img" src="" alt="Zoomed image">
-  </div>
+  <nav>
+    <ul class="wide">
+      <li><a href="https://soufisoufiane.github.io/SOUFISoufiane/">Accueil</a></li>
+      <li><a href="../competences/">Compétences</a></li>
+      <li><a href="../projets/">Projets</a></li>
+      <li><a href="../gallery/" class="active">Galerie</a></li>
+      <li><a href="../contact/">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="wide">
+    <div class="glider-contain">
+      <button class="glider-prev">❮</button>
+      <div class="glider">
+        <img src="../assets/gallery/Img1%20(1).jpeg" alt="Projet GEII - photo 1">
+        <img src="../assets/gallery/Img1%20(2).jpeg" alt="Projet GEII - photo 2">
+        <img src="../assets/gallery/Img1%20(3).jpeg" alt="Projet GEII - photo 3">
+        <img src="../assets/gallery/Img1%20(4).jpeg" alt="Projet GEII - photo 4">
+        <img src="../assets/gallery/Img1%20(5).jpeg" alt="Projet GEII - photo 5">
+        <img src="../assets/gallery/Img1%20(6).jpeg" alt="Projet GEII - photo 6">
+        <img src="../assets/gallery/Img1%20(7).jpeg" alt="Projet GEII - photo 7">
+        <img src="../assets/gallery/Img1%20(8).jpeg" alt="Projet GEII - photo 8">
+        <img src="../assets/gallery/Projet%20tutor%C3%A9%20PAMI.jpeg" alt="Projet tutoré PAMI">
+      </div>
+      <button class="glider-next">❯</button>
+      <div class="glider-dots"></div>
+    </div>
+
+    <div class="modal" id="modal">
+      <img id="modal-img" src="" alt="Image agrandie">
+    </div>
+  </main>
+
+  <footer>
+    Page conçue par Soufi Soufiane – Étudiant en BUT GEII, parcours Automatisme & Informatique Industrielle.
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
   <script>
@@ -158,7 +84,6 @@
       ]
     });
 
-    // Zoom modal
     const modal = document.getElementById('modal');
     const modalImg = document.getElementById('modal-img');
     document.querySelectorAll('.glider img').forEach(img => {
