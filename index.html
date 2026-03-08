@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio de Soufi Soufiane - Etudiant en BUT GEII, parcours Automatisme & Informatique Industrielle. Alternance, projets et competences.">
+  <meta name="description" content="Portfolio de Soufi Soufiane - Etudiant en BUT GEII, parcours Automatisme & Informatique Industrielle.">
   <title>Soufi Soufiane | Portfolio</title>
   <link rel="icon" type="image/png" href="assets/logo_ss.png">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
-    /* === Homepage-specific styles === */
+    body { opacity: 0; transition: opacity 0.15s ease; }
+
     .hero {
       background: linear-gradient(135deg, var(--primary) 0%, #1a3a5c 100%);
       color: #fff;
@@ -16,12 +17,7 @@
       padding: 4rem 2rem 3rem;
     }
 
-    .hero h1 {
-      color: #fff;
-      font-size: 2.4rem;
-      margin: 0 0 0.5rem;
-      letter-spacing: -0.5px;
-    }
+    .hero h1 { color: #fff; font-size: 2.4rem; margin: 0 0 0.5rem; letter-spacing: -0.5px; }
 
     .hero .subtitle {
       font-size: 1.15rem;
@@ -30,12 +26,7 @@
       font-weight: 300;
     }
 
-    .hero .cta-group {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+    .hero .cta-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
     .hero .cta-group a {
       display: inline-block;
@@ -47,50 +38,15 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .hero .cta-group a:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
+    .hero .cta-group a:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); }
+    .cta-primary { background-color: #fff; color: var(--primary); }
+    .cta-secondary { background-color: rgba(255, 255, 255, 0.15); color: #fff; border: 1px solid rgba(255, 255, 255, 0.4); }
 
-    .cta-primary {
-      background-color: #fff;
-      color: var(--primary);
-    }
+    .home-section { padding: 3rem 2rem; max-width: 900px; margin: 0 auto; }
+    .home-section h2 { font-size: 1.5rem; margin-top: 0; margin-bottom: 1.5rem; padding-bottom: 0.4rem; border-bottom: 2px solid var(--bg-alt); }
+    .about-text { font-size: 1.05rem; line-height: 1.8; color: var(--text-intro); }
 
-    .cta-secondary {
-      background-color: rgba(255, 255, 255, 0.15);
-      color: #fff;
-      border: 1px solid rgba(255, 255, 255, 0.4);
-    }
-
-    /* Sections */
-    .home-section {
-      padding: 3rem 2rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .home-section h2 {
-      font-size: 1.5rem;
-      margin-top: 0;
-      margin-bottom: 1.5rem;
-      padding-bottom: 0.4rem;
-      border-bottom: 2px solid var(--bg-alt);
-    }
-
-    /* About */
-    .about-text {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: var(--text-intro);
-    }
-
-    /* Objectives list */
-    .objectives {
-      list-style: none;
-      padding: 0;
-    }
-
+    .objectives { list-style: none; padding: 0; }
     .objectives li {
       padding: 0.8rem 1rem 0.8rem 1.4rem;
       margin-bottom: 0.5rem;
@@ -98,182 +54,55 @@
       border-radius: 0 var(--radius) var(--radius) 0;
       transition: background-color 0.2s ease, transform 0.2s ease;
     }
+    .objectives li:hover { background-color: var(--bg-alt); transform: translateX(4px); }
+    .objectives .done { border-left-color: #2ecc71; }
 
-    .objectives li:hover {
-      background-color: var(--bg-alt);
-      transform: translateX(4px);
-    }
-
-    .objectives .done {
-      border-left-color: #2ecc71;
-    }
-
-    /* Progress track */
-    .progress-track {
-      display: flex;
-      gap: 0;
-      margin: 1.5rem 0;
-    }
-
+    .progress-track { display: flex; gap: 0; margin: 1.5rem 0; }
     .progress-step {
-      flex: 1;
-      text-align: center;
-      padding: 0.8rem 0.4rem;
-      font-size: 0.85rem;
-      font-weight: 600;
-      border: 1px solid var(--bg-alt);
-      position: relative;
+      flex: 1; text-align: center; padding: 0.8rem 0.4rem;
+      font-size: 0.85rem; font-weight: 600; border: 1px solid var(--bg-alt);
     }
-
-    .progress-step.completed {
-      background-color: var(--primary);
-      color: #fff;
-      border-color: var(--primary);
-    }
-
-    .progress-step.current {
-      background-color: #e8f0fe;
-      border-color: var(--primary);
-      color: var(--primary);
-    }
-
-    .progress-step.future {
-      background-color: var(--bg-alt);
-      color: var(--text-muted);
-    }
-
+    .progress-step.completed { background-color: var(--primary); color: #fff; border-color: var(--primary); }
+    .progress-step.current { background-color: #e8f0fe; border-color: var(--primary); color: var(--primary); }
+    .progress-step.future { background-color: var(--bg-alt); color: var(--text-muted); }
     .progress-step:first-child { border-radius: var(--radius) 0 0 var(--radius); }
     .progress-step:last-child { border-radius: 0 var(--radius) var(--radius) 0; }
+    .progress-label { text-align: center; margin-top: 0.8rem; font-size: 0.9rem; color: var(--text-muted); }
 
-    .progress-label {
-      text-align: center;
-      margin-top: 0.8rem;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
-
-    /* Skills grid */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-    }
-
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
     .skill-card {
-      padding: 1rem 1.2rem;
-      border: 1px solid var(--bg-alt);
-      border-radius: var(--radius);
+      padding: 1rem 1.2rem; border: 1px solid var(--bg-alt); border-radius: var(--radius);
       transition: box-shadow 0.2s ease, transform 0.2s ease;
     }
+    .skill-card:hover { box-shadow: 0 4px 12px rgba(10, 25, 47, 0.1); transform: translateY(-2px); }
+    .skill-card h3 { margin: 0 0 0.4rem; font-size: 1rem; }
+    .skill-card p { margin: 0; font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
 
-    .skill-card:hover {
-      box-shadow: 0 4px 12px rgba(10, 25, 47, 0.1);
-      transform: translateY(-2px);
-    }
-
-    .skill-card h3 {
-      margin: 0 0 0.4rem;
-      font-size: 1rem;
-    }
-
-    .skill-card p {
-      margin: 0;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
-
-    /* Projects preview */
-    .project-preview {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.2rem;
-    }
-
+    .project-preview { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.2rem; }
     .project-card {
-      padding: 1.2rem;
-      border: 1px solid var(--bg-alt);
-      border-radius: var(--radius);
-      text-decoration: none;
-      color: inherit;
+      padding: 1.2rem; border: 1px solid var(--bg-alt); border-radius: var(--radius);
+      text-decoration: none; color: inherit;
       transition: box-shadow 0.2s ease, transform 0.2s ease;
     }
+    .project-card:hover { box-shadow: 0 4px 12px rgba(10, 25, 47, 0.1); transform: translateY(-2px); }
+    .project-card h3 { margin: 0 0 0.5rem; font-size: 1rem; }
+    .project-card p { margin: 0 0 0.6rem; font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
+    .project-card .tech { font-size: 0.8rem; color: var(--primary); font-weight: 600; }
 
-    .project-card:hover {
-      box-shadow: 0 4px 12px rgba(10, 25, 47, 0.1);
-      transform: translateY(-2px);
-    }
-
-    .project-card h3 {
-      margin: 0 0 0.5rem;
-      font-size: 1rem;
-    }
-
-    .project-card p {
-      margin: 0 0 0.6rem;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
-
-    .project-card .tech {
-      font-size: 0.8rem;
-      color: var(--primary);
-      font-weight: 600;
-    }
-
-    /* Contact strip */
-    .contact-strip {
-      background-color: var(--bg-alt);
-      padding: 3rem 2rem;
-      text-align: center;
-    }
-
-    .contact-strip h2 {
-      border: none;
-      margin: 0 0 0.5rem;
-    }
-
-    .contact-strip p {
-      color: var(--text-muted);
-      margin: 0 0 1.5rem;
-    }
-
-    .contact-links {
-      display: flex;
-      gap: 1rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
+    .contact-strip { background-color: var(--bg-alt); padding: 3rem 2rem; text-align: center; }
+    .contact-strip h2 { border: none; margin: 0 0 0.5rem; }
+    .contact-strip p { color: var(--text-muted); margin: 0 0 1.5rem; }
+    .contact-links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
     .contact-links a {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      padding: 0.6rem 1.2rem;
-      border-radius: var(--radius);
-      text-decoration: none;
-      font-size: 0.95rem;
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      padding: 0.6rem 1.2rem; border-radius: var(--radius);
+      text-decoration: none; font-size: 0.95rem;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
+    .contact-links a:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(10, 25, 47, 0.15); }
+    .link-primary { background-color: var(--primary); color: #fff; }
+    .link-outline { background-color: #fff; color: var(--primary); border: 1px solid var(--primary); }
 
-    .contact-links a:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(10, 25, 47, 0.15);
-    }
-
-    .link-primary {
-      background-color: var(--primary);
-      color: #fff;
-    }
-
-    .link-outline {
-      background-color: #fff;
-      color: var(--primary);
-      border: 1px solid var(--primary);
-    }
-
-    /* Responsive */
     @media (max-width: 768px) {
       .hero { padding: 3rem 1.5rem 2rem; }
       .hero h1 { font-size: 1.8rem; }
@@ -281,60 +110,56 @@
       .home-section { padding: 2rem 1rem; }
       .progress-step { font-size: 0.75rem; padding: 0.6rem 0.2rem; }
     }
-
     @media (max-width: 480px) {
       .hero h1 { font-size: 1.5rem; }
       .progress-step { font-size: 0.65rem; }
     }
   </style>
 </head>
-<body>
+<body data-page="home">
   <nav>
     <ul>
-      <li><a href="./" class="active">Accueil</a></li>
-      <li><a href="competences/">Competences</a></li>
-      <li><a href="projets/">Projets</a></li>
-      <li><a href="gallery/">Galerie</a></li>
-      <li><a href="contact/">Contact</a></li>
+      <li><a href="./" class="active" data-i18n="nav.home">Accueil</a></li>
+      <li><a href="competences/" data-i18n="nav.skills">Comp&eacute;tences</a></li>
+      <li><a href="projets/" data-i18n="nav.projects">Projets</a></li>
+      <li><a href="gallery/" data-i18n="nav.gallery">Galerie</a></li>
+      <li><a href="contact/" data-i18n="nav.contact">Contact</a></li>
+      <li class="lang-switcher">
+        <select id="lang-select" onchange="applyLang(this.value)">
+          <option value="fr">FR</option>
+          <option value="en">EN</option>
+        </select>
+      </li>
     </ul>
   </nav>
 
-  <!-- Hero -->
   <section class="hero">
-    <h1>Soufi Soufiane</h1>
-    <p class="subtitle">Etudiant en BUT GEII &mdash; Automatisme & Informatique Industrielle</p>
+    <h1 data-i18n="home.heroTitle">Soufi Soufiane</h1>
+    <p class="subtitle" data-i18n="home.heroSubtitle">&Eacute;tudiant en BUT GEII &mdash; Automatisme &amp; Informatique Industrielle</p>
     <div class="cta-group">
-      <a href="projets/" class="cta-primary">Voir mes projets</a>
-      <a href="contact/" class="cta-secondary">Me contacter</a>
+      <a href="projets/" class="cta-primary" data-i18n="home.ctaProjects">Voir mes projets</a>
+      <a href="contact/" class="cta-secondary" data-i18n="home.ctaContact">Me contacter</a>
     </div>
   </section>
 
   <main>
-    <!-- About -->
     <section class="home-section">
-      <h2>Qui suis-je ?</h2>
-      <p class="about-text">
-        Etudiant en BUT Genie Electrique et Informatique Industrielle (GEII) a l'IUT du Creusot,
-        je suis en reconversion professionnelle avec l'objectif de devenir ingenieur en automatisation
-        et robotique. Apres plusieurs annees dans un autre secteur, j'ai decide de m'orienter vers
-        un domaine technique, concret et porteur, en accord avec ma curiosite naturelle et mon envie d'apprendre.
-      </p>
+      <h2 data-i18n="home.aboutTitle">Qui suis-je ?</h2>
+      <p class="about-text" data-i18n="home.aboutText">&Eacute;tudiant en BUT GEII &agrave; l&rsquo;IUT du Creusot, je suis en reconversion professionnelle avec l&rsquo;objectif de devenir ing&eacute;nieur en automatisation et robotique.</p>
     </section>
 
-    <!-- Objectives -->
     <section class="home-section">
-      <h2>Objectifs professionnels</h2>
+      <h2 data-i18n="home.objectivesTitle">Objectifs professionnels</h2>
       <ul class="objectives">
-        <li class="done">Obtenir une alternance de 24 mois en automatisation industrielle <strong>(Obtenue)</strong></li>
-        <li>Travailler sur des projets d'automates, de supervision ou de developpement embarque</li>
-        <li>Developper des competences solides en programmation industrielle, robotique et conception de systemes</li>
-        <li>Evoluer vers un poste d'ingenieur en automatisation & robotique d'ici 5 ans</li>
+        <li class="done" data-i18n="home.obj1">Obtenir une alternance de 24 mois en automatisation industrielle <strong>(Obtenue)</strong></li>
+        <li data-i18n="home.obj2">Travailler sur des projets d&rsquo;automates, de supervision ou de d&eacute;veloppement embarqu&eacute;</li>
+        <li data-i18n="home.obj3">D&eacute;velopper des comp&eacute;tences solides en programmation industrielle, robotique et conception de syst&egrave;mes</li>
+        <li data-i18n="home.obj4">&Eacute;voluer vers un poste d&rsquo;ing&eacute;nieur en automatisation &amp; robotique d&rsquo;ici 5 ans</li>
       </ul>
     </section>
 
-    <!-- Progress -->
     <section class="home-section">
-      <h2>Parcours de formation</h2>
+      <h2 data-i18n="home.progressTitle">Parcours de formation</h2>
       <div class="progress-track">
         <div class="progress-step completed">BUT 1</div>
         <div class="progress-step current">BUT 2</div>
@@ -343,71 +168,71 @@
         <div class="progress-step future">INGE 2</div>
         <div class="progress-step future">INGE 3</div>
       </div>
-      <p class="progress-label">Actuellement en fin de 2e annee &mdash; 50% du parcours accompli</p>
+      <p class="progress-label" data-i18n="home.progressLabel">Actuellement en fin de 2e ann&eacute;e &mdash; 50% du parcours accompli</p>
     </section>
 
-    <!-- Skills -->
     <section class="home-section">
-      <h2>Competences cles</h2>
+      <h2 data-i18n="home.skillsTitle">Comp&eacute;tences cl&eacute;s</h2>
       <div class="skills-grid">
         <div class="skill-card">
-          <h3>Automatisme</h3>
-          <p>Ladder, GRAFCET, logique combinatoire et sequentielle, automates programmables</p>
+          <h3 data-i18n="home.skillAutoTitle">Automatisme</h3>
+          <p data-i18n="home.skillAutoDesc">Ladder, GRAFCET, logique combinatoire et s&eacute;quentielle, automates programmables</p>
         </div>
         <div class="skill-card">
-          <h3>Electrotechnique</h3>
-          <p>Lecture de schemas, dimensionnement, realisation de circuits</p>
+          <h3 data-i18n="home.skillElecTitle">&Eacute;lectrotechnique</h3>
+          <p data-i18n="home.skillElecDesc">Lecture de sch&eacute;mas, dimensionnement, r&eacute;alisation de circuits</p>
         </div>
         <div class="skill-card">
-          <h3>Programmation</h3>
-          <p>C embarque (PIC16F7), Python, microcontroleurs</p>
+          <h3 data-i18n="home.skillProgTitle">Programmation</h3>
+          <p data-i18n="home.skillProgDesc">C embarqu&eacute; (PIC16F7), Python, microcontr&ocirc;leurs</p>
         </div>
         <div class="skill-card">
-          <h3>Electronique</h3>
-          <p>Simulation, soudure CMS/traversants, conception de cartes PCB (KiCad, Ultiboard)</p>
+          <h3 data-i18n="home.skillElectrTitle">&Eacute;lectronique</h3>
+          <p data-i18n="home.skillElectrDesc">Simulation, soudure CMS/traversants, conception de cartes PCB (KiCad, Ultiboard)</p>
         </div>
       </div>
       <p style="margin-top: 1.5rem; text-align: center;">
-        <a href="competences/" class="btn">Toutes mes competences</a>
+        <a href="competences/" class="btn" data-i18n="home.skillsLink">Toutes mes comp&eacute;tences</a>
       </p>
     </section>
 
-    <!-- Projects preview -->
     <section class="home-section">
-      <h2>Projets techniques</h2>
+      <h2 data-i18n="home.projectsTitle">Projets techniques</h2>
       <div class="project-preview">
         <a href="projets/" class="project-card">
-          <h3>Robot autonome &mdash; PAMI</h3>
-          <p>Concevoir un robot capable de naviguer de facon autonome dans un labyrinthe.</p>
-          <span class="tech">Capteurs &middot; C embarque &middot; Servomoteurs</span>
+          <h3 data-i18n="home.projPamiTitle">Robot autonome &mdash; PAMI</h3>
+          <p data-i18n="home.projPamiDesc">Concevoir un robot capable de naviguer de fa&ccedil;on autonome dans un labyrinthe.</p>
+          <span class="tech" data-i18n="home.projPamiTech">Capteurs &middot; C embarqu&eacute; &middot; Servomoteurs</span>
         </a>
         <a href="projets/" class="project-card">
-          <h3>Barriere infrarouge</h3>
-          <p>Realiser une barriere IR analogique fonctionnelle avec filtre, amplificateur et monostable.</p>
-          <span class="tech">Multisim &middot; Ultiboard &middot; PCB</span>
+          <h3 data-i18n="home.projIrTitle">Barri&egrave;re infrarouge</h3>
+          <p data-i18n="home.projIrDesc">R&eacute;aliser une barri&egrave;re IR analogique fonctionnelle avec filtre, amplificateur et monostable.</p>
+          <span class="tech" data-i18n="home.projIrTech">Multisim &middot; Ultiboard &middot; PCB</span>
         </a>
         <a href="projets/" class="project-card">
-          <h3>Automatisme industriel</h3>
-          <p>Analyser et automatiser des systemes industriels simules (ascenseur, parking, perceuse).</p>
-          <span class="tech">GRAFCET &middot; Ladder &middot; EcoStruxure</span>
+          <h3 data-i18n="home.projAutoTitle">Automatisme industriel</h3>
+          <p data-i18n="home.projAutoDesc">Analyser et automatiser des syst&egrave;mes industriels simul&eacute;s (ascenseur, parking, perceuse).</p>
+          <span class="tech" data-i18n="home.projAutoTech">GRAFCET &middot; Ladder &middot; EcoStruxure</span>
         </a>
       </div>
     </section>
   </main>
 
-  <!-- Contact strip -->
   <section class="contact-strip">
-    <h2>Interessé par mon profil ?</h2>
-    <p>N'hesitez pas a me contacter pour une opportunite ou un projet.</p>
+    <h2 data-i18n="home.contactTitle">Int&eacute;ress&eacute; par mon profil ?</h2>
+    <p data-i18n="home.contactText">N&rsquo;h&eacute;sitez pas &agrave; me contacter pour une opportunit&eacute; ou un projet.</p>
     <div class="contact-links">
-      <a href="contact/" class="link-primary">Formulaire de contact</a>
+      <a href="contact/" class="link-primary" data-i18n="home.contactForm">Formulaire de contact</a>
       <a href="mailto:Soufiane_Soufi@etu.u-bourgogne.fr" class="link-outline">Soufiane_Soufi@etu.u-bourgogne.fr</a>
-      <a href="https://www.linkedin.com/in/soufi-soufiane" target="_blank" class="link-outline">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/soufi-soufiane" target="_blank" class="link-outline" data-i18n="home.contactLinkedin">LinkedIn</a>
     </div>
   </section>
 
   <footer>
-    Soufi Soufiane &mdash; Etudiant en BUT GEII, parcours Automatisme & Informatique Industrielle.
+    <span data-i18n="footer">Soufi Soufiane &mdash; &Eacute;tudiant en BUT GEII, parcours Automatisme &amp; Informatique Industrielle.</span>
   </footer>
+
+  <script src="assets/js/i18n.js"></script>
+  <script src="assets/js/lang-switcher.js"></script>
 </body>
 </html>

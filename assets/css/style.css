@@ -356,6 +356,32 @@ footer {
   border-radius: 8px;
 }
 
+/* === Language Switcher === */
+.lang-switcher {
+  margin-left: auto;
+}
+
+.lang-switcher select {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: var(--radius);
+  padding: 0.3rem 0.5rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color 0.2s ease;
+}
+
+.lang-switcher select:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.lang-switcher select option {
+  background-color: var(--primary);
+  color: #fff;
+}
+
 /* === Responsive Design === */
 @media (max-width: 768px) {
   main {
