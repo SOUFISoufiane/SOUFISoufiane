@@ -1,18 +1,113 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Redirection...</title>
-    <script>
-      const lang = navigator.language || navigator.userLanguage;
-      if (lang.startsWith('en')) {
-        window.location.href = './en/index_en.html';
-      } else {
-        window.location.href = './fr/index_fr.html'; // si tu as une version fr dans /fr/ ou sinon garde ./index_fr.html
-      }
-    </script>
-  </head>
-  <body>
-    <p>Redirection en cours...</p>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comp&eacute;tences | Soufi Soufiane</title>
+  <link rel="icon" type="image/png" href="../assets/logo_ss.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>body { opacity: 0; transition: opacity 0.15s ease; }</style>
+</head>
+<body data-page="competences">
+  <header>
+    <div class="header-inner">
+      <a href="../">
+        <img src="../assets/logo_ss.png" alt="SS Logo">
+      </a>
+      <h1 data-i18n="competences.pageTitle">Mes Comp&eacute;tences Cl&eacute;s</h1>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../" data-i18n="nav.home">Accueil</a></li>
+      <li><a href="../competences/" class="active" data-i18n="nav.skills">Comp&eacute;tences</a></li>
+      <li><a href="../projets/" data-i18n="nav.projects">Projets</a></li>
+      <li><a href="../gallery/" data-i18n="nav.gallery">Galerie</a></li>
+      <li><a href="../contact/" data-i18n="nav.contact">Contact</a></li>
+      <li class="lang-switcher">
+        <select id="lang-select" onchange="applyLang(this.value)">
+          <option value="fr">FR Fran&ccedil;ais</option>
+          <option value="en">EN English</option>
+        </select>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <p class="intro" data-i18n="competences.intro">
+      Cette page rassemble les comp&eacute;tences les plus repr&eacute;sentatives de mon parcours, issues &agrave; la fois de ma formation en automatisme et de mon exp&eacute;rience professionnelle pass&eacute;e. Chaque comp&eacute;tence est exprim&eacute;e &agrave; travers une action concr&egrave;te, un savoir-faire acquis, et les qualit&eacute;s humaines que j&rsquo;ai d&eacute;velopp&eacute;es en contexte r&eacute;el.
+    </p>
+
+    <section class="section">
+      <h2 data-i18n="competences.techTitle">Comp&eacute;tences techniques</h2>
+
+      <div class="competence" data-i18n="competences.tech1">
+        <strong>Programmer</strong> des syst&egrave;mes automatis&eacute;s en Ladder et GRAFCET<br>
+        <em>en d&eacute;veloppant ma rigueur, ma logique s&eacute;quentielle et mon autonomie</em>
+      </div>
+
+      <div class="competence" data-i18n="competences.tech2">
+        <strong>Analyser</strong> un cahier des charges et <strong>traduire</strong> un besoin en organigramme fonctionnel<br>
+        <em>en d&eacute;veloppant mon sens de l&rsquo;analyse et ma m&eacute;thode</em>
+      </div>
+
+      <div class="competence" data-i18n="competences.tech3">
+        <strong>Concevoir</strong> des circuits &eacute;lectriques simples, <strong>c&acirc;bler</strong> des montages sur table et <strong>utiliser</strong> des instruments de mesure<br>
+        <em>en renfor&ccedil;ant ma pr&eacute;cision, ma rigueur exp&eacute;rimentale et mon sens du d&eacute;tail</em>
+      </div>
+
+      <div class="competence" data-i18n="competences.tech4">
+        <strong>Simuler</strong> des circuits analogiques, <strong>concevoir</strong> des cartes sur Ultiboard, <strong>r&eacute;aliser</strong> des PCB et <strong>souder</strong> des composants (CMS et traversants)<br>
+        <em>en d&eacute;veloppant ma patience, ma m&eacute;thodologie et mon habilet&eacute; manuelle</em>
+      </div>
+
+      <div class="competence" data-i18n="competences.tech5">
+        <strong>Programmer</strong> en langage C pour des syst&egrave;mes embarqu&eacute;s simples<br>
+        <em>en renfor&ccedil;ant ma logique algorithmique et ma capacit&eacute; de d&eacute;bogage</em>
+      </div>
+
+      <div class="competence" data-i18n="competences.tech6">
+        <strong>Documenter</strong> un projet technique (sch&eacute;mas, commentaires, rapports)<br>
+        <em>en d&eacute;veloppant ma communication technique et la tra&ccedil;abilit&eacute; de mes actions</em>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 data-i18n="competences.softTitle">Savoir-&ecirc;tre professionnel</h2>
+
+      <div class="competence" data-i18n="competences.soft1">
+        <strong>Superviser</strong> et <strong>former</strong> une &eacute;quipe technique<br>
+        <em>en d&eacute;veloppant ma responsabilit&eacute; et mon sens du collectif</em>
+      </div>
+
+      <div class="competence" data-i18n="competences.soft2">
+        <strong>Adapter</strong> mon discours technique selon le niveau de l&rsquo;interlocuteur<br>
+        <em>en renfor&ccedil;ant mon sens de l&rsquo;&eacute;coute et ma p&eacute;dagogie</em>
+      </div>
+
+      <div class="competence" data-i18n="competences.soft3">
+        <strong>Organiser</strong> mes priorit&eacute;s techniques dans un environnement sous pression<br>
+        <em>en am&eacute;liorant ma gestion du temps et mon autonomie</em>
+      </div>
+
+      <div class="competence" data-i18n="competences.soft4">
+        <strong>Documenter</strong> les actions techniques pour assurer la tra&ccedil;abilit&eacute;<br>
+        <em>en d&eacute;veloppant mon organisation et ma pr&eacute;cision</em>
+      </div>
+
+      <div class="competence" data-i18n="competences.soft5">
+        <strong>Collaborer</strong> dans des &eacute;quipes multiculturelles<br>
+        <em>en enrichissant mon adaptabilit&eacute; et ma conscience professionnelle</em>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span data-i18n="footer">Soufi Soufiane &mdash; &Eacute;tudiant en BUT GEII, parcours Automatisme &amp; Informatique Industrielle.</span>
+  </footer>
+
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/lang-switcher.js"></script>
+</body>
 </html>

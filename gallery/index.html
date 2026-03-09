@@ -7,30 +7,37 @@
   <link rel="icon" type="image/png" href="../assets/logo_ss.png">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <style>body { opacity: 0; transition: opacity 0.15s ease; }</style>
 </head>
-<body>
+<body data-page="gallery">
   <header>
     <div class="header-inner wide">
-      <a href="https://soufisoufiane.github.io/SOUFISoufiane/">
+      <a href="../">
         <img src="../assets/logo_ss.png" alt="SS Logo">
       </a>
-      <h1>Galerie</h1>
+      <h1 data-i18n="gallery.pageTitle">Galerie</h1>
     </div>
   </header>
 
   <nav>
     <ul class="wide">
-      <li><a href="https://soufisoufiane.github.io/SOUFISoufiane/">Accueil</a></li>
-      <li><a href="../competences/">Compétences</a></li>
-      <li><a href="../projets/">Projets</a></li>
-      <li><a href="../gallery/" class="active">Galerie</a></li>
-      <li><a href="../contact/">Contact</a></li>
+      <li><a href="../" data-i18n="nav.home">Accueil</a></li>
+      <li><a href="../competences/" data-i18n="nav.skills">Comp&eacute;tences</a></li>
+      <li><a href="../projets/" data-i18n="nav.projects">Projets</a></li>
+      <li><a href="../gallery/" class="active" data-i18n="nav.gallery">Galerie</a></li>
+      <li><a href="../contact/" data-i18n="nav.contact">Contact</a></li>
+      <li class="lang-switcher">
+        <select id="lang-select" onchange="applyLang(this.value)">
+          <option value="fr">FR Fran&ccedil;ais</option>
+          <option value="en">EN English</option>
+        </select>
+      </li>
     </ul>
   </nav>
 
   <main class="wide">
     <div class="glider-contain">
-      <button class="glider-prev">❮</button>
+      <button class="glider-prev">&#10094;</button>
       <div class="glider">
         <img src="../assets/gallery/Img1%20(1).jpeg" alt="Projet GEII - photo 1">
         <img src="../assets/gallery/Img1%20(2).jpeg" alt="Projet GEII - photo 2">
@@ -40,9 +47,9 @@
         <img src="../assets/gallery/Img1%20(6).jpeg" alt="Projet GEII - photo 6">
         <img src="../assets/gallery/Img1%20(7).jpeg" alt="Projet GEII - photo 7">
         <img src="../assets/gallery/Img1%20(8).jpeg" alt="Projet GEII - photo 8">
-        <img src="../assets/gallery/Projet%20tutor%C3%A9%20PAMI.jpeg" alt="Projet tutoré PAMI">
+        <img src="../assets/gallery/Projet%20tutor%C3%A9%20PAMI.jpeg" alt="Projet tutor&eacute; PAMI">
       </div>
-      <button class="glider-next">❯</button>
+      <button class="glider-next">&#10095;</button>
       <div class="glider-dots"></div>
     </div>
 
@@ -52,10 +59,12 @@
   </main>
 
   <footer>
-    Page conçue par Soufi Soufiane – Étudiant en BUT GEII, parcours Automatisme & Informatique Industrielle.
+    <span data-i18n="footer">Soufi Soufiane &mdash; &Eacute;tudiant en BUT GEII, parcours Automatisme &amp; Informatique Industrielle.</span>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/lang-switcher.js"></script>
   <script>
     new Glider(document.querySelector('.glider'), {
       slidesToShow: 1,
@@ -69,30 +78,24 @@
       responsive: [
         {
           breakpoint: 768,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
-          }
+          settings: { slidesToShow: 2, slidesToScroll: 1 }
         },
         {
           breakpoint: 1024,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1
-          }
+          settings: { slidesToShow: 3, slidesToScroll: 1 }
         }
       ]
     });
 
-    const modal = document.getElementById('modal');
-    const modalImg = document.getElementById('modal-img');
-    document.querySelectorAll('.glider img').forEach(img => {
-      img.addEventListener('click', () => {
+    var modal = document.getElementById('modal');
+    var modalImg = document.getElementById('modal-img');
+    document.querySelectorAll('.glider img').forEach(function (img) {
+      img.addEventListener('click', function () {
         modal.style.display = 'flex';
         modalImg.src = img.src;
       });
     });
-    modal.addEventListener('click', () => {
+    modal.addEventListener('click', function () {
       modal.style.display = 'none';
     });
   </script>

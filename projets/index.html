@@ -1,76 +1,80 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <script>
-    const userLang = navigator.language || navigator.userLanguage;
-    if (userLang.startsWith('en')) {
-      window.location.href = './en/index_en.html';
-    }
-  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projets | Soufi Soufiane</title>
   <link rel="icon" type="image/png" href="../assets/logo_ss.png">
   <link rel="stylesheet" href="../assets/css/style.css">
+  <style>body { opacity: 0; transition: opacity 0.15s ease; }</style>
 </head>
-<body>
+<body data-page="projets">
   <header>
     <div class="header-inner">
-      <a href="https://soufisoufiane.github.io/SOUFISoufiane/">
+      <a href="../">
         <img src="../assets/logo_ss.png" alt="SS Logo">
       </a>
-      <h1>Mes projets techniques</h1>
+      <h1 data-i18n="projets.pageTitle">Mes projets techniques</h1>
     </div>
   </header>
 
   <nav>
     <ul>
-      <li><a href="https://soufisoufiane.github.io/SOUFISoufiane/">Accueil</a></li>
-      <li><a href="../competences/">Compétences</a></li>
-      <li><a href="../projets/" class="active">Projets</a></li>
-      <li><a href="../gallery/">Galerie</a></li>
-      <li><a href="../contact/">Contact</a></li>
+      <li><a href="../" data-i18n="nav.home">Accueil</a></li>
+      <li><a href="../competences/" data-i18n="nav.skills">Comp&eacute;tences</a></li>
+      <li><a href="../projets/" class="active" data-i18n="nav.projects">Projets</a></li>
+      <li><a href="../gallery/" data-i18n="nav.gallery">Galerie</a></li>
+      <li><a href="../contact/" data-i18n="nav.contact">Contact</a></li>
+      <li class="lang-switcher">
+        <select id="lang-select" onchange="applyLang(this.value)">
+          <option value="fr">FR Fran&ccedil;ais</option>
+          <option value="en">EN English</option>
+        </select>
+      </li>
     </ul>
   </nav>
 
   <main>
-    <p>Cette page présente mes projets les plus significatifs réalisés au cours de ma formation en BUT GEII. Chaque projet m'a permis de mobiliser des compétences techniques concrètes, de progresser dans ma pratique, et de développer des savoir-être essentiels au travail en équipe et en autonomie.</p>
+    <p data-i18n="projets.intro">Cette page pr&eacute;sente mes projets les plus significatifs r&eacute;alis&eacute;s au cours de ma formation en BUT GEII. Chaque projet m&rsquo;a permis de mobiliser des comp&eacute;tences techniques concr&egrave;tes, de progresser dans ma pratique, et de d&eacute;velopper des savoir-&ecirc;tre essentiels au travail en &eacute;quipe et en autonomie.</p>
 
     <section class="section">
       <div class="project">
-        <h3>🤖 Robot autonome – Projet PAMI</h3>
-        <p><span class="label">Contexte :</span> Projet annuel tutoré de première année du BUT GEII.</p>
-        <p><span class="label">Objectif :</span> Concevoir un robot capable de naviguer de façon autonome dans un labyrinthe.</p>
-        <p><span class="label">Compétences techniques :</span> Gestion d'énergie, calculs électriques, conception de cartes (Multisim, KiCad, Ultiboard), gravure, perçage, soudure traditionnelle et CMS, programmation C embarqué (PIC16F7), initiation à Python (Raspberry Pi), mise en œuvre de servomoteurs, capteurs, conversion analogique/numérique, PWM.</p>
-        <p><span class="label">Ce que j'ai appris :</span> Cycle complet de développement, logique de commande, structuration de projet complexe, apprentissage par la pratique, recherche & développement.</p>
-        <p><span class="label">Savoir-être développés :</span> Travail d'équipe, coordination via Gantt Project, communication, suivi de planning, leadership (en tant que chef de groupe), autonomie et adaptabilité.</p>
+        <h3 data-i18n="projets.proj1Title">&#x1F916; Robot autonome &ndash; Projet PAMI</h3>
+        <p data-i18n="projets.proj1Context"><span class="label">Contexte :</span> Projet annuel tutor&eacute; de premi&egrave;re ann&eacute;e du BUT GEII.</p>
+        <p data-i18n="projets.proj1Goal"><span class="label">Objectif :</span> Concevoir un robot capable de naviguer de fa&ccedil;on autonome dans un labyrinthe.</p>
+        <p data-i18n="projets.proj1Skills"><span class="label">Comp&eacute;tences techniques :</span> Gestion d&rsquo;&eacute;nergie, calculs &eacute;lectriques, conception de cartes (Multisim, KiCad, Ultiboard), gravure, per&ccedil;age, soudure traditionnelle et CMS, programmation C embarqu&eacute; (PIC16F7), initiation &agrave; Python (Raspberry Pi), mise en &oelig;uvre de servomoteurs, capteurs, conversion analogique/num&eacute;rique, PWM.</p>
+        <p data-i18n="projets.proj1Learned"><span class="label">Ce que j&rsquo;ai appris :</span> Cycle complet de d&eacute;veloppement, logique de commande, structuration de projet complexe, apprentissage par la pratique, recherche &amp; d&eacute;veloppement.</p>
+        <p data-i18n="projets.proj1Soft"><span class="label">Savoir-&ecirc;tre d&eacute;velopp&eacute;s :</span> Travail d&rsquo;&eacute;quipe, coordination via Gantt Project, communication, suivi de planning, leadership (en tant que chef de groupe), autonomie et adaptabilit&eacute;.</p>
       </div>
 
       <div class="project">
-        <h3>📡 Conception et réalisation d'une barrière infrarouge</h3>
-        <p><span class="label">Contexte :</span> Situation d'Apprentissage et d'Évaluation n°3 (7 séances de 3h + travail personnel).</p>
-        <p><span class="label">Objectif :</span> Réaliser une barrière infrarouge analogique fonctionnelle et précise, intégrant un filtre, un amplificateur, un comparateur et un monostable.</p>
-        <p><span class="label">Compétences techniques :</span> Simulation (Multisim), conception de PCB (Ultiboard), soudure, réglage de fréquences, analyse de réponse fréquentielle, tests et mesures (Bode, chronogrammes), mise en œuvre de composants passifs et actifs.</p>
-        <p><span class="label">Ce que j'ai appris :</span> Précision dans le dimensionnement, importance des essais/erreurs, rigueur dans la documentation, et gestion d'un projet individuel.</p>
-        <p><span class="label">Savoir-être développés :</span> Organisation, gestion du temps, curiosité technique, persévérance, réactivité, capacité à rechercher des informations au-delà du programme.</p>
+        <h3 data-i18n="projets.proj2Title">&#x1F4E1; Conception et r&eacute;alisation d&rsquo;une barri&egrave;re infrarouge</h3>
+        <p data-i18n="projets.proj2Context"><span class="label">Contexte :</span> Situation d&rsquo;Apprentissage et d&rsquo;&Eacute;valuation n&deg;3 (7 s&eacute;ances de 3h + travail personnel).</p>
+        <p data-i18n="projets.proj2Goal"><span class="label">Objectif :</span> R&eacute;aliser une barri&egrave;re infrarouge analogique fonctionnelle et pr&eacute;cise, int&eacute;grant un filtre, un amplificateur, un comparateur et un monostable.</p>
+        <p data-i18n="projets.proj2Skills"><span class="label">Comp&eacute;tences techniques :</span> Simulation (Multisim), conception de PCB (Ultiboard), soudure, r&eacute;glage de fr&eacute;quences, analyse de r&eacute;ponse fr&eacute;quentielle, tests et mesures (Bode, chronogrammes), mise en &oelig;uvre de composants passifs et actifs.</p>
+        <p data-i18n="projets.proj2Learned"><span class="label">Ce que j&rsquo;ai appris :</span> Pr&eacute;cision dans le dimensionnement, importance des essais/erreurs, rigueur dans la documentation, et gestion d&rsquo;un projet individuel.</p>
+        <p data-i18n="projets.proj2Soft"><span class="label">Savoir-&ecirc;tre d&eacute;velopp&eacute;s :</span> Organisation, gestion du temps, curiosit&eacute; technique, pers&eacute;v&eacute;rance, r&eacute;activit&eacute;, capacit&eacute; &agrave; rechercher des informations au-del&agrave; du programme.</p>
         <p>
-          <a href="../assets/docs/RapportSAE3.pdf" target="_blank" class="btn">🔍 Voir le rapport PDF du projet</a>
+          <a href="../assets/docs/RapportSAE3.pdf" target="_blank" class="btn" data-i18n="projets.proj2Pdf">&#x1F50D; Voir le rapport PDF du projet</a>
         </p>
       </div>
 
       <div class="project">
-        <h3>⚙️ Travaux pratiques d'automatisme – cas industriels simulés</h3>
-        <p><span class="label">Contexte :</span> TP hebdomadaires avec cahiers des charges industriels (ascenseur, barrière, ligne de production, perceuse, parking automatisé).</p>
-        <p><span class="label">Objectif :</span> Analyser des systèmes industriels simples et les automatiser en respectant des contraintes fonctionnelles et temporelles.</p>
-        <p><span class="label">Compétences techniques :</span> GRAFCET, programmation Ladder, simulation et implémentation sur automates physiques avec EcoStruxure Control Expert, manipulation de variables (BOOL, INT, STRING...), temporisations, compteurs, états initiaux, transition vers le Ladder depuis le GRAFCET.</p>
-        <p><span class="label">Ce que j'ai appris :</span> Approfondissement des langages d'automatisme, rigueur dans la programmation, lecture de schémas de fonctionnement.</p>
-        <p><span class="label">Savoir-être développés :</span> Patience, précision, écoute active, respect des consignes, réflexion structurée.</p>
+        <h3 data-i18n="projets.proj3Title">&#x2699;&#xFE0F; Travaux pratiques d&rsquo;automatisme &ndash; cas industriels simul&eacute;s</h3>
+        <p data-i18n="projets.proj3Context"><span class="label">Contexte :</span> TP hebdomadaires avec cahiers des charges industriels (ascenseur, barri&egrave;re, ligne de production, perceuse, parking automatis&eacute;).</p>
+        <p data-i18n="projets.proj3Goal"><span class="label">Objectif :</span> Analyser des syst&egrave;mes industriels simples et les automatiser en respectant des contraintes fonctionnelles et temporelles.</p>
+        <p data-i18n="projets.proj3Skills"><span class="label">Comp&eacute;tences techniques :</span> GRAFCET, programmation Ladder, simulation et impl&eacute;mentation sur automates physiques avec EcoStruxure Control Expert, manipulation de variables (BOOL, INT, STRING...), temporisations, compteurs, &eacute;tats initiaux, transition vers le Ladder depuis le GRAFCET.</p>
+        <p data-i18n="projets.proj3Learned"><span class="label">Ce que j&rsquo;ai appris :</span> Approfondissement des langages d&rsquo;automatisme, rigueur dans la programmation, lecture de sch&eacute;mas de fonctionnement.</p>
+        <p data-i18n="projets.proj3Soft"><span class="label">Savoir-&ecirc;tre d&eacute;velopp&eacute;s :</span> Patience, pr&eacute;cision, &eacute;coute active, respect des consignes, r&eacute;flexion structur&eacute;e.</p>
       </div>
     </section>
   </main>
 
   <footer>
-    Page conçue par Soufi Soufiane – Étudiant en BUT GEII, parcours Automatisme & Informatique Industrielle.
+    <span data-i18n="footer">Soufi Soufiane &mdash; &Eacute;tudiant en BUT GEII, parcours Automatisme &amp; Informatique Industrielle.</span>
   </footer>
+
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/lang-switcher.js"></script>
 </body>
 </html>
