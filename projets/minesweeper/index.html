@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D&eacute;mineur | Soufi Soufiane</title>
+  <link rel="icon" type="image/png" href="../../assets/logo_ss.png">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <style>
+    body { opacity: 0; transition: opacity 0.15s ease; }
+
+    .game-wrapper {
+      text-align: center;
+      margin: 2rem auto;
+    }
+
+    #minesweeper-canvas {
+      border: 2px solid var(--primary);
+      border-radius: var(--radius);
+      cursor: pointer;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .game-note {
+      background-color: var(--bg-alt);
+      border-left: 3px solid var(--primary);
+      padding: 1rem 1.2rem;
+      margin-bottom: 1.5rem;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      font-size: 0.9rem;
+      color: var(--text-intro);
+      line-height: 1.6;
+    }
+
+    .game-instructions {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin: 1rem 0;
+      line-height: 1.6;
+    }
+
+    #game-over-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 200;
+    }
+
+    .game-over-box {
+      background: #fff;
+      padding: 2rem 3rem;
+      border-radius: var(--radius);
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .game-over-box h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.5rem;
+      color: #c0392b;
+    }
+
+    .game-over-box p {
+      margin: 0 0 1.5rem;
+      color: var(--text-muted);
+    }
+
+    .game-over-box button {
+      background-color: var(--primary);
+      color: #fff;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      border-radius: var(--radius);
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .game-over-box button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(10, 25, 47, 0.2);
+    }
+
+    .game-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+
+    .game-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: var(--radius);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      background: #fff;
+    }
+
+    .game-links a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(10, 25, 47, 0.15);
+    }
+  </style>
+</head>
+<body data-page="minesweeper">
+  <header>
+    <div class="header-inner">
+      <a href="../../">
+        <img src="../../assets/logo_ss.png" alt="SS Logo">
+      </a>
+      <h1 data-i18n="minesweeper.pageTitle">D&eacute;mineur</h1>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../../" data-i18n="nav.home">Accueil</a></li>
+      <li><a href="../../competences/" data-i18n="nav.skills">Comp&eacute;tences</a></li>
+      <li><a href="../../projets/" data-i18n="nav.projects">Projets</a></li>
+      <li><a href="../../gallery/" data-i18n="nav.gallery">Galerie</a></li>
+      <li><a href="../../contact/" data-i18n="nav.contact">Contact</a></li>
+      <li class="lang-switcher">
+        <select id="lang-select" onchange="applyLang(this.value)">
+          <option value="fr">FR Fran&ccedil;ais</option>
+          <option value="en">EN English</option>
+        </select>
+      </li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="game-note" data-i18n="minesweeper.note">
+      Ce jeu a &eacute;t&eacute; initialement d&eacute;velopp&eacute; en <strong>C++ orient&eacute; objet</strong> avec <strong>Qt Creator</strong> dans le cadre d&rsquo;un projet d&rsquo;informatique scolaire (d&eacute;lai : 1 mois). Il a &eacute;t&eacute; converti en JavaScript/Canvas pour &ecirc;tre jouable directement dans le navigateur via GitHub Pages. Le code source C++ original est disponible en t&eacute;l&eacute;chargement ci-dessous.
+    </div>
+
+    <p class="game-instructions" data-i18n="minesweeper.instructions">
+      <strong>Comment jouer :</strong> Clic gauche pour r&eacute;v&eacute;ler une case. Clic droit pour poser/retirer un drapeau. &Eacute;vitez les mines !
+    </p>
+
+    <div class="game-wrapper">
+      <canvas id="minesweeper-canvas"></canvas>
+    </div>
+
+    <div class="game-links">
+      <a href="https://github.com/SOUFISoufiane/SOUFISoufiane/tree/main/minesweeper-src" target="_blank" data-i18n="minesweeper.sourceLink">&#x1F4C1; Voir le code source C++</a>
+      <a href="../../minesweeper-src/Rapport%20du%20projet%20Demineur%20SOUFI%20Soufiane.pdf" target="_blank" data-i18n="minesweeper.reportLink">&#x1F4C4; T&eacute;l&eacute;charger le rapport</a>
+    </div>
+  </main>
+
+  <div id="game-over-overlay">
+    <div class="game-over-box">
+      <h2 data-i18n="minesweeper.gameOverTitle">LOST</h2>
+      <p data-i18n="minesweeper.gameOverText">BOOM t&rsquo;es mort !!</p>
+      <button onclick="ressayerGame()" data-i18n="minesweeper.retry">R&eacute;essayer</button>
+    </div>
+  </div>
+
+  <footer>
+    <span data-i18n="footer">Soufi Soufiane &mdash; &Eacute;tudiant en BUT GEII, parcours Automatisme &amp; Informatique Industrielle.</span>
+  </footer>
+
+  <script src="../../assets/js/i18n.js"></script>
+  <script src="../../assets/js/lang-switcher.js"></script>
+  <script src="minesweeper.js"></script>
+</body>
+</html>

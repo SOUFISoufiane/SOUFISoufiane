@@ -19,14 +19,16 @@ const translations = {
       competences: "Comp\u00e9tences | Soufi Soufiane",
       projets: "Projets | Soufi Soufiane",
       gallery: "Galerie | Soufi Soufiane",
-      contact: "Contact | Soufi Soufiane"
+      contact: "Contact | Soufi Soufiane",
+      minesweeper: "D\u00e9mineur | Soufi Soufiane"
     },
     en: {
       home: "Soufi Soufiane | Portfolio",
       competences: "Skills | Soufi Soufiane",
       projets: "Projects | Soufi Soufiane",
       gallery: "Gallery | Soufi Soufiane",
-      contact: "Contact | Soufi Soufiane"
+      contact: "Contact | Soufi Soufiane",
+      minesweeper: "Minesweeper | Soufi Soufiane"
     }
   },
 
@@ -74,6 +76,10 @@ const translations = {
       projAutoDesc: "Analyser et automatiser des syst\u00e8mes industriels simul\u00e9s (ascenseur, parking, perceuse).",
       projAutoTech: "GRAFCET \u00b7 Ladder \u00b7 EcoStruxure",
 
+      projMineTitle: "D\u00e9mineur \u2014 Minesweeper",
+      projMineDesc: "Jeu du d\u00e9mineur en C++ OOP (Qt Creator), converti en JS pour \u00eatre jouable dans le navigateur.",
+      projMineTech: "C++ \u00b7 Qt \u00b7 OOP \u00b7 JavaScript",
+
       contactTitle: "Int\u00e9ress\u00e9 par mon profil ?",
       contactText: "N\u2019h\u00e9sitez pas \u00e0 me contacter pour une opportunit\u00e9 ou un projet.",
       contactForm: "Formulaire de contact",
@@ -118,6 +124,10 @@ const translations = {
       projAutoTitle: "Industrial automation",
       projAutoDesc: "Analyze and automate simulated industrial systems (elevator, parking, drill press).",
       projAutoTech: "GRAFCET \u00b7 Ladder \u00b7 EcoStruxure",
+
+      projMineTitle: "Minesweeper",
+      projMineDesc: "Minesweeper game built in C++ OOP (Qt Creator), converted to JS for in-browser play.",
+      projMineTech: "C++ \u00b7 Qt \u00b7 OOP \u00b7 JavaScript",
 
       contactTitle: "Interested in my profile?",
       contactText: "Feel free to reach out for an opportunity or a project.",
@@ -198,7 +208,18 @@ const translations = {
       proj3Goal: "<span class=\"label\">Objectif :</span> Analyser des syst\u00e8mes industriels simples et les automatiser en respectant des contraintes fonctionnelles et temporelles.",
       proj3Skills: "<span class=\"label\">Comp\u00e9tences techniques :</span> GRAFCET, programmation Ladder, simulation et impl\u00e9mentation sur automates physiques avec EcoStruxure Control Expert, manipulation de variables (BOOL, INT, STRING...), temporisations, compteurs, \u00e9tats initiaux, transition vers le Ladder depuis le GRAFCET.",
       proj3Learned: "<span class=\"label\">Ce que j\u2019ai appris :</span> Approfondissement des langages d\u2019automatisme, rigueur dans la programmation, lecture de sch\u00e9mas de fonctionnement.",
-      proj3Soft: "<span class=\"label\">Savoir-\u00eatre d\u00e9velopp\u00e9s :</span> Patience, pr\u00e9cision, \u00e9coute active, respect des consignes, r\u00e9flexion structur\u00e9e."
+      proj3Soft: "<span class=\"label\">Savoir-\u00eatre d\u00e9velopp\u00e9s :</span> Patience, pr\u00e9cision, \u00e9coute active, respect des consignes, r\u00e9flexion structur\u00e9e.",
+
+      proj4Title: "\u{1F4A3} D\u00e9mineur (Minesweeper) \u2013 Projet C++ / Qt",
+      proj4Desc: "Jeu du d\u00e9mineur d\u00e9velopp\u00e9 en <strong>C++ orient\u00e9 objet</strong> avec <strong>Qt Creator</strong> dans le cadre d\u2019un cours d\u2019informatique. Le projet devait \u00eatre r\u00e9alis\u00e9 en <strong>1 mois</strong>, incluant la conception de l\u2019architecture objet, le rendu graphique via QPainter, et la gestion des \u00e9v\u00e9nements souris. Pour le rendre jouable directement sur GitHub Pages, il a \u00e9t\u00e9 fid\u00e8lement converti en JavaScript/Canvas.",
+      proj4Context: "<span class=\"label\">Contexte :</span> Projet scolaire d\u2019informatique en BUT GEII, d\u00e9lai de r\u00e9alisation : 1 mois.",
+      proj4Goal: "<span class=\"label\">Objectif :</span> D\u00e9velopper un d\u00e9mineur fonctionnel avec grille dynamique, placement al\u00e9atoire de mines, gestion de drapeaux, r\u00e9v\u00e9lation en cascade (flood fill), et d\u00e9tection de game over.",
+      proj4Skills: "<span class=\"label\">Comp\u00e9tences techniques :</span> C++ POO (classes, constructeurs, m\u00e9thodes), Qt Creator, QPainter, QMouseEvent, QVector, algorithmes r\u00e9cursifs (flood fill), g\u00e9n\u00e9ration al\u00e9atoire, conversion du projet en JavaScript/Canvas.",
+      proj4Learned: "<span class=\"label\">Ce que j\u2019ai appris :</span> Conception orient\u00e9e objet, programmation \u00e9v\u00e9nementielle, rendu graphique sur canevas, logique r\u00e9cursive, portage multi-plateformes.",
+      proj4Soft: "<span class=\"label\">Savoir-\u00eatre d\u00e9velopp\u00e9s :</span> R\u00e9solution de probl\u00e8mes, d\u00e9bogage m\u00e9thodique, gestion du temps avec deadline serr\u00e9e, autonomie dans l\u2019apprentissage.",
+      proj4Play: "\u{1F3AE} Jouer au D\u00e9mineur",
+      proj4Source: "\u{1F4C1} Voir le code source",
+      proj4Report: "\u{1F4C4} T\u00e9l\u00e9charger le rapport"
     },
     en: {
       pageTitle: "My Technical Projects",
@@ -224,7 +245,18 @@ const translations = {
       proj3Goal: "<span class=\"label\">Goal:</span> Analyze and automate basic industrial systems following functional and timing constraints.",
       proj3Skills: "<span class=\"label\">Technical skills:</span> GRAFCET, Ladder programming, simulation and deployment on real PLCs using EcoStruxure Control Expert, variables (BOOL, INT, STRING), timers, counters, state logic, Ladder-GRAFCET transition.",
       proj3Learned: "<span class=\"label\">What I learned:</span> Deepened PLC language practice, programming rigor, and functional logic understanding.",
-      proj3Soft: "<span class=\"label\">Soft skills developed:</span> Patience, accuracy, active listening, following requirements, structured thinking."
+      proj3Soft: "<span class=\"label\">Soft skills developed:</span> Patience, accuracy, active listening, following requirements, structured thinking.",
+
+      proj4Title: "\u{1F4A3} Minesweeper Game \u2013 C++ / Qt Project",
+      proj4Desc: "Minesweeper game developed in <strong>object-oriented C++</strong> with <strong>Qt Creator</strong> as part of a computer science class. The project had to be completed within a <strong>1-month deadline</strong>, including OOP architecture design, graphical rendering via QPainter, and mouse event handling. It was faithfully converted to JavaScript/Canvas to be playable directly on GitHub Pages.",
+      proj4Context: "<span class=\"label\">Context:</span> School informatics project in BUT GEII, 1-month deadline.",
+      proj4Goal: "<span class=\"label\">Goal:</span> Build a functional minesweeper with dynamic grid, random mine placement, flag management, cascade reveal (flood fill), and game over detection.",
+      proj4Skills: "<span class=\"label\">Technical skills:</span> C++ OOP (classes, constructors, methods), Qt Creator, QPainter, QMouseEvent, QVector, recursive algorithms (flood fill), random generation, project conversion to JavaScript/Canvas.",
+      proj4Learned: "<span class=\"label\">What I learned:</span> Object-oriented design, event-driven GUI programming, canvas rendering, recursive logic, cross-platform deployment.",
+      proj4Soft: "<span class=\"label\">Soft skills developed:</span> Problem solving, methodical debugging, time management under tight deadline, self-directed learning.",
+      proj4Play: "\u{1F3AE} Play Minesweeper",
+      proj4Source: "\u{1F4C1} View source code",
+      proj4Report: "\u{1F4C4} Download report (French only)"
     }
   },
 
@@ -237,6 +269,32 @@ const translations = {
     },
     en: {
       pageTitle: "Gallery"
+    }
+  },
+
+  // =====================
+  // MINESWEEPER PAGE
+  // =====================
+  minesweeper: {
+    fr: {
+      pageTitle: "D\u00e9mineur",
+      note: "Ce jeu a \u00e9t\u00e9 initialement d\u00e9velopp\u00e9 en <strong>C++ orient\u00e9 objet</strong> avec <strong>Qt Creator</strong> dans le cadre d\u2019un projet d\u2019informatique scolaire (d\u00e9lai : 1 mois). Il a \u00e9t\u00e9 converti en JavaScript/Canvas pour \u00eatre jouable directement dans le navigateur via GitHub Pages. Le code source C++ original est disponible en t\u00e9l\u00e9chargement ci-dessous.",
+      instructions: "<strong>Comment jouer :</strong> Clic gauche pour r\u00e9v\u00e9ler une case. Clic droit pour poser/retirer un drapeau. \u00c9vitez les mines !",
+      sourceLink: "\u{1F4C1} Voir le code source C++",
+      reportLink: "\u{1F4C4} T\u00e9l\u00e9charger le rapport",
+      gameOverTitle: "LOST",
+      gameOverText: "BOOM t\u2019es mort !!",
+      retry: "R\u00e9essayer"
+    },
+    en: {
+      pageTitle: "Minesweeper",
+      note: "This game was originally developed in <strong>object-oriented C++</strong> with <strong>Qt Creator</strong> as part of a school informatics project (1-month deadline). It was converted to JavaScript/Canvas to be playable directly in the browser via GitHub Pages. The original C++ source code is available for download below.",
+      instructions: "<strong>How to play:</strong> Left-click to reveal a tile. Right-click to place/remove a flag. Avoid the mines!",
+      sourceLink: "\u{1F4C1} View C++ source code",
+      reportLink: "\u{1F4C4} Download report (French only)",
+      gameOverTitle: "LOST",
+      gameOverText: "BOOM you're dead!!",
+      retry: "Retry"
     }
   },
 
