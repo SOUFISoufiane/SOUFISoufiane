@@ -218,7 +218,7 @@ const translations = {
       proj4Learned: "<span class=\"label\">Ce que j\u2019ai appris :</span> Conception orient\u00e9e objet, programmation \u00e9v\u00e9nementielle, rendu graphique sur canevas, logique r\u00e9cursive, portage multi-plateformes.",
       proj4Soft: "<span class=\"label\">Savoir-\u00eatre d\u00e9velopp\u00e9s :</span> R\u00e9solution de probl\u00e8mes, d\u00e9bogage m\u00e9thodique, gestion du temps avec deadline serr\u00e9e, autonomie dans l\u2019apprentissage.",
       proj4Play: "\u{1F3AE} Jouer au D\u00e9mineur",
-      proj4Source: "\u{1F4C1} Voir le code source",
+      proj4Source: "\u{1F4C1} T\u00e9l\u00e9charger le code source",
       proj4Report: "\u{1F4C4} T\u00e9l\u00e9charger le rapport"
     },
     en: {
@@ -255,7 +255,7 @@ const translations = {
       proj4Learned: "<span class=\"label\">What I learned:</span> Object-oriented design, event-driven GUI programming, canvas rendering, recursive logic, cross-platform deployment.",
       proj4Soft: "<span class=\"label\">Soft skills developed:</span> Problem solving, methodical debugging, time management under tight deadline, self-directed learning.",
       proj4Play: "\u{1F3AE} Play Minesweeper",
-      proj4Source: "\u{1F4C1} View source code",
+      proj4Source: "\u{1F4C1} Download source code",
       proj4Report: "\u{1F4C4} Download report (French only)"
     }
   },
@@ -280,7 +280,7 @@ const translations = {
       pageTitle: "D\u00e9mineur",
       note: "Ce jeu a \u00e9t\u00e9 initialement d\u00e9velopp\u00e9 en <strong>C++ orient\u00e9 objet</strong> avec <strong>Qt Creator</strong> dans le cadre d\u2019un projet d\u2019informatique scolaire (d\u00e9lai : 1 mois). Il a \u00e9t\u00e9 converti en JavaScript/Canvas pour \u00eatre jouable directement dans le navigateur via GitHub Pages. Le code source C++ original est disponible en t\u00e9l\u00e9chargement ci-dessous.",
       instructions: "<strong>Comment jouer :</strong> Clic gauche pour r\u00e9v\u00e9ler une case. Clic droit pour poser/retirer un drapeau. \u00c9vitez les mines !",
-      sourceLink: "\u{1F4C1} Voir le code source C++",
+      sourceLink: "\u{1F4C1} T\u00e9l\u00e9charger le code source C++",
       reportLink: "\u{1F4C4} T\u00e9l\u00e9charger le rapport",
       gameOverTitle: "LOST",
       gameOverText: "BOOM t\u2019es mort !!",
@@ -290,7 +290,7 @@ const translations = {
       pageTitle: "Minesweeper",
       note: "This game was originally developed in <strong>object-oriented C++</strong> with <strong>Qt Creator</strong> as part of a school informatics project (1-month deadline). It was converted to JavaScript/Canvas to be playable directly in the browser via GitHub Pages. The original C++ source code is available for download below.",
       instructions: "<strong>How to play:</strong> Left-click to reveal a tile. Right-click to place/remove a flag. Avoid the mines!",
-      sourceLink: "\u{1F4C1} View C++ source code",
+      sourceLink: "\u{1F4C1} Download C++ source code",
       reportLink: "\u{1F4C4} Download report (French only)",
       gameOverTitle: "LOST",
       gameOverText: "BOOM you're dead!!",
