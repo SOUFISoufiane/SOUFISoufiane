@@ -46,10 +46,13 @@ const translations = {
       aboutText: "\u00c9tudiant en BUT G\u00e9nie \u00c9lectrique et Informatique Industrielle (GEII) \u00e0 l\u2019IUT du Creusot, je suis en reconversion professionnelle avec l\u2019objectif de devenir ing\u00e9nieur en automatisation et robotique. Apr\u00e8s plusieurs ann\u00e9es dans un autre secteur, j\u2019ai d\u00e9cid\u00e9 de m\u2019orienter vers un domaine technique, concret et porteur, en accord avec ma curiosit\u00e9 naturelle et mon envie d\u2019apprendre.",
 
       objectivesTitle: "Objectifs professionnels",
-      obj1: "Obtenir une alternance de 24 mois en automatisation industrielle <strong>(Obtenue)</strong>",
+      obj1: "Obtenir une alternance de 24 mois en automatisation industrielle",
       obj2: "Travailler sur des projets d\u2019automates, de supervision ou de d\u00e9veloppement embarqu\u00e9",
       obj3: "D\u00e9velopper des comp\u00e9tences solides en programmation industrielle, robotique et conception de syst\u00e8mes",
       obj4: "\u00c9voluer vers un poste d\u2019ing\u00e9nieur en automatisation & robotique d\u2019ici 5 ans",
+      status_achieved: "Obtenue",
+      status_inprogress: "En cours",
+      status_planned: "Pr\u00e9vu",
 
       progressTitle: "Parcours de formation",
       progressLabel: "Actuellement en fin de 2e ann\u00e9e \u2014 50% du parcours accompli",
@@ -95,10 +98,13 @@ const translations = {
       aboutText: "I am a student in Electrical Engineering and Industrial Computing (GEII) at the IUT du Creusot, currently in a career transition with the goal of becoming an automation and robotics engineer. After several years in another field, I chose to pursue a technical, hands-on and forward-looking domain, driven by my natural curiosity and eagerness to learn.",
 
       objectivesTitle: "Professional objectives",
-      obj1: "Secure a 24-month apprenticeship in industrial automation <strong>(Achieved)</strong>",
+      obj1: "Secure a 24-month apprenticeship in industrial automation",
       obj2: "Work on PLC, supervision, or embedded development projects",
       obj3: "Build strong skills in industrial programming, robotics, and systems design",
       obj4: "Grow into an automation & robotics engineer role within 5 years",
+      status_achieved: "Achieved",
+      status_inprogress: "In Progress",
+      status_planned: "Planned",
 
       progressTitle: "Education path",
       progressLabel: "Currently finishing 2nd year \u2014 50% of the path completed",
