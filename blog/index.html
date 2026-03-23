@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Soufi Soufiane</title>
+  <link rel="icon" type="image/png" href="../assets/logo_ss.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body { opacity: 0; transition: opacity 0.15s ease; }
+    .blog-list { max-width: 760px; margin: 2rem auto; padding: 0 1.5rem; }
+    .blog-list h2 { margin-bottom: 1.5rem; }
+    .blog-empty { color: var(--text-muted); text-align: center; padding: 3rem 1rem; }
+    .blog-card {
+      display: block; padding: 1.2rem; margin-bottom: 1rem;
+      border: 1px solid var(--bg-alt); border-radius: var(--radius);
+      text-decoration: none; color: var(--text);
+      transition: background-color 0.2s, transform 0.2s;
+    }
+    .blog-card:hover { background: var(--bg-alt); transform: translateX(4px); }
+    .blog-card h3 { margin: 0 0 0.3rem; color: var(--primary); }
+    .blog-card .blog-meta { color: #888; font-size: 0.85rem; }
+    .blog-card .blog-excerpt { margin-top: 0.4rem; font-size: 0.9rem; color: var(--text-muted); }
+    .blog-tag {
+      display: inline-block; padding: 0.15rem 0.5rem; background: var(--bg-alt);
+      border-radius: 999px; font-size: 0.7rem; margin-right: 0.2rem;
+    }
+  </style>
+</head>
+<body data-page="blog">
+  <header>
+    <div class="header-inner">
+      <a href="../">
+        <img src="../assets/logo_ss.png" alt="SS Logo">
+      </a>
+      <h1 data-i18n="blog.pageTitle">Blog</h1>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../" data-i18n="nav.home">Accueil</a></li>
+      <li><a href="../competences/" data-i18n="nav.skills">Comp&eacute;tences</a></li>
+      <li><a href="../projets/" data-i18n="nav.projects">Projets</a></li>
+      <li><a href="../gallery/" data-i18n="nav.gallery">Galerie</a></li>
+      <li><a href="../contact/" data-i18n="nav.contact">Contact</a></li>
+      <li><a href="../blog/" class="active" data-i18n="nav.blog">Blog</a></li>
+      <li><a href="../admin/" data-i18n="nav.admin">Admin</a></li>
+      <li class="lang-switcher">
+        <select id="lang-select" onchange="applyLang(this.value)">
+          <option value="fr">FR Fran&ccedil;ais</option>
+          <option value="en">EN English</option>
+        </select>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="blog-list">
+    <p class="blog-empty" data-i18n="blog.noPosts">Aucun article pour le moment. Revenez bient&ocirc;t !</p>
+
+    <!-- Published posts will be added here as <a> cards, e.g.:
+    <a href="posts/my-post.html" class="blog-card">
+      <h3>Post title</h3>
+      <div class="blog-meta">2026-03-23 — <span class="blog-tag">tag</span></div>
+      <p class="blog-excerpt">First paragraph...</p>
+    </a>
+    -->
+  </main>
+
+  <footer>
+    <span data-i18n="footer">Soufi Soufiane &mdash; &Eacute;tudiant en BUT GEII, parcours Automatisme &amp; Informatique Industrielle.</span>
+  </footer>
+
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/lang-switcher.js"></script>
+</body>
+</html>

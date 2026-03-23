@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin | Soufi Soufiane</title>
+  <link rel="icon" type="image/png" href="../assets/logo_ss.png">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body { opacity: 0; transition: opacity 0.15s ease; }
+
+    /* Login */
+    #admin-login {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      min-height: 60vh; gap: 1rem; padding: 2rem;
+    }
+    #admin-login h2 { margin-bottom: 0.5rem; }
+    #login-form {
+      display: flex; flex-direction: column; gap: 0.8rem;
+      width: 100%; max-width: 360px;
+    }
+    #login-form input {
+      padding: 0.7rem 1rem; border: 1px solid var(--bg-alt);
+      border-radius: var(--radius); font-size: 1rem;
+      background: var(--bg); color: var(--text);
+    }
+    #login-form input:focus { outline: 2px solid var(--primary); }
+    #login-form button {
+      padding: 0.7rem; background: var(--primary); color: #fff;
+      border: none; border-radius: var(--radius); font-size: 1rem;
+      cursor: pointer; transition: opacity 0.2s;
+    }
+    #login-form button:hover { opacity: 0.85; }
+    #login-error { color: #e74c3c; font-size: 0.9rem; display: none; text-align: center; }
+
+    /* Dashboard */
+    #admin-dashboard { display: none; padding: 1rem 2rem 3rem; max-width: 960px; margin: 0 auto; }
+    .admin-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 0.5rem; }
+    .admin-header h2 { margin: 0; }
+    #logout-btn {
+      padding: 0.4rem 1rem; background: transparent; color: #e74c3c;
+      border: 1px solid #e74c3c; border-radius: var(--radius); cursor: pointer;
+      font-size: 0.85rem; transition: all 0.2s;
+    }
+    #logout-btn:hover { background: #e74c3c; color: #fff; }
+
+    /* Tabs */
+    .admin-tabs {
+      display: flex; gap: 0; border-bottom: 2px solid var(--bg-alt);
+      margin-bottom: 1.5rem; overflow-x: auto;
+    }
+    .admin-tab {
+      padding: 0.6rem 1.2rem; background: none; border: none;
+      color: var(--text-muted); font-size: 0.9rem; cursor: pointer;
+      border-bottom: 2px solid transparent; margin-bottom: -2px;
+      white-space: nowrap; transition: all 0.2s;
+    }
+    .admin-tab:hover { color: var(--text); }
+    .admin-tab.active { color: var(--primary); border-bottom-color: var(--primary); font-weight: 600; }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* Blog editor */
+    .blog-form { display: flex; flex-direction: column; gap: 0.8rem; }
+    .blog-form label { font-weight: 600; font-size: 0.9rem; }
+    .blog-form input, .blog-form textarea, .blog-form select {
+      padding: 0.6rem 0.8rem; border: 1px solid var(--bg-alt);
+      border-radius: var(--radius); font-size: 0.95rem;
+      background: var(--bg); color: var(--text); font-family: inherit;
+    }
+    .blog-form textarea { min-height: 250px; resize: vertical; }
+    .blog-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.5rem; }
+    .blog-actions button {
+      padding: 0.5rem 1.2rem; border: none; border-radius: var(--radius);
+      cursor: pointer; font-size: 0.9rem; transition: opacity 0.2s;
+    }
+    .btn-draft { background: var(--bg-alt); color: var(--text); }
+    .btn-publish { background: #2ecc71; color: #fff; }
+    .btn-danger { background: #e74c3c; color: #fff; }
+    .btn-secondary { background: var(--bg-alt); color: var(--text); }
+    .blog-actions button:hover { opacity: 0.8; }
+
+    /* Drafts list */
+    .drafts-section { margin-top: 2rem; }
+    .drafts-section h3 { margin-bottom: 0.8rem; }
+    .draft-item {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 0.6rem 0.8rem; border: 1px solid var(--bg-alt);
+      border-radius: var(--radius); margin-bottom: 0.4rem;
+    }
+    .draft-item span { font-size: 0.9rem; }
+    .draft-item .draft-actions { display: flex; gap: 0.3rem; }
+    .draft-item button {
+      padding: 0.3rem 0.6rem; border: none; border-radius: 4px;
+      cursor: pointer; font-size: 0.8rem;
+    }
+
+    /* Content editor */
+    .content-editor-group { margin-bottom: 1.5rem; }
+    .content-editor-group h3 { margin-bottom: 0.6rem; color: var(--primary); }
+    .content-field { margin-bottom: 0.6rem; }
+    .content-field label { display: block; font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.2rem; }
+    .content-field input, .content-field textarea {
+      width: 100%; padding: 0.5rem 0.7rem; border: 1px solid var(--bg-alt);
+      border-radius: var(--radius); font-size: 0.9rem;
+      background: var(--bg); color: var(--text); font-family: inherit;
+      box-sizing: border-box;
+    }
+    .content-field textarea { min-height: 80px; resize: vertical; }
+    .export-btn {
+      padding: 0.6rem 1.5rem; background: var(--primary); color: #fff;
+      border: none; border-radius: var(--radius); cursor: pointer;
+      font-size: 0.9rem; margin-top: 1rem;
+    }
+    .export-btn:hover { opacity: 0.85; }
+
+    /* Analytics & Contact placeholders */
+    .placeholder-card {
+      background: var(--bg-alt); border-radius: var(--radius);
+      padding: 2rem; text-align: center;
+    }
+    .placeholder-card h3 { margin-bottom: 0.8rem; }
+    .placeholder-card p { color: var(--text-muted); margin-bottom: 0.5rem; }
+    .placeholder-card a {
+      color: var(--primary); text-decoration: underline;
+    }
+
+    /* Lang selector row */
+    .lang-row { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; }
+    .lang-row label { font-weight: 600; font-size: 0.9rem; }
+    .lang-row select {
+      padding: 0.4rem 0.6rem; border: 1px solid var(--bg-alt);
+      border-radius: var(--radius); background: var(--bg); color: var(--text);
+    }
+
+    @media (max-width: 600px) {
+      #admin-dashboard { padding: 1rem; }
+      .admin-tabs { gap: 0; }
+      .admin-tab { padding: 0.5rem 0.8rem; font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body data-page="admin">
+  <header>
+    <div class="header-inner">
+      <a href="../">
+        <img src="../assets/logo_ss.png" alt="SS Logo">
+      </a>
+      <h1 data-i18n="admin.pageTitle">Administration</h1>
+    </div>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../" data-i18n="nav.home">Accueil</a></li>
+      <li><a href="../competences/" data-i18n="nav.skills">Comp&eacute;tences</a></li>
+      <li><a href="../projets/" data-i18n="nav.projects">Projets</a></li>
+      <li><a href="../gallery/" data-i18n="nav.gallery">Galerie</a></li>
+      <li><a href="../contact/" data-i18n="nav.contact">Contact</a></li>
+      <li><a href="../blog/" data-i18n="nav.blog">Blog</a></li>
+      <li><a href="../admin/" class="active" data-i18n="nav.admin">Admin</a></li>
+      <li class="lang-switcher">
+        <select id="lang-select" onchange="applyLang(this.value)">
+          <option value="fr">FR Fran&ccedil;ais</option>
+          <option value="en">EN English</option>
+        </select>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- Login Screen -->
+  <div id="admin-login">
+    <h2 data-i18n="admin.loginTitle">Connexion administrateur</h2>
+    <form id="login-form">
+      <input type="password" id="login-password" placeholder="Mot de passe" data-i18n-placeholder="admin.passwordPlaceholder" required>
+      <button type="submit" data-i18n="admin.loginBtn">Se connecter</button>
+      <p id="login-error"></p>
+    </form>
+  </div>
+
+  <!-- Dashboard (hidden until auth) -->
+  <div id="admin-dashboard">
+    <div class="admin-header">
+      <h2 data-i18n="admin.dashboardTitle">Tableau de bord</h2>
+      <button id="logout-btn" data-i18n="admin.logout">D&eacute;connexion</button>
+    </div>
+
+    <div class="admin-tabs">
+      <button class="admin-tab active" data-tab="blog" data-i18n="admin.tabBlog">Blog</button>
+      <button class="admin-tab" data-tab="analytics" data-i18n="admin.tabAnalytics">Analytiques</button>
+      <button class="admin-tab" data-tab="contact" data-i18n="admin.tabContact">Messages</button>
+      <button class="admin-tab" data-tab="content" data-i18n="admin.tabContent">Contenu</button>
+    </div>
+
+    <!-- Blog Tab -->
+    <div class="tab-panel active" id="tab-blog">
+      <div class="blog-form">
+        <label data-i18n="admin.blogTitleLabel">Titre de l'article</label>
+        <input type="text" id="blog-title" placeholder="Mon article...">
+
+        <label data-i18n="admin.blogDateLabel">Date</label>
+        <input type="date" id="blog-date">
+
+        <label data-i18n="admin.blogTagsLabel">Tags (s&eacute;par&eacute;s par des virgules)</label>
+        <input type="text" id="blog-tags" placeholder="automatisme, projet, robotique">
+
+        <label data-i18n="admin.blogContentLabel">Contenu (Markdown)</label>
+        <textarea id="blog-content" placeholder="## Introduction&#10;&#10;Votre contenu ici..."></textarea>
+
+        <div class="blog-actions">
+          <button class="btn-draft" id="blog-save-draft" data-i18n="admin.saveDraft">Sauvegarder brouillon</button>
+          <button class="btn-publish" id="blog-publish" data-i18n="admin.publish">Publier (t&eacute;l&eacute;charger HTML)</button>
+        </div>
+      </div>
+
+      <div class="drafts-section">
+        <h3 data-i18n="admin.draftsTitle">Brouillons</h3>
+        <div id="drafts-list"></div>
+      </div>
+    </div>
+
+    <!-- Analytics Tab -->
+    <div class="tab-panel" id="tab-analytics">
+      <div class="placeholder-card">
+        <h3 data-i18n="admin.analyticsTitle">Statistiques du site</h3>
+        <p data-i18n="admin.analyticsSetup">Pour activer les statistiques, configurez un service d'analyse gratuit :</p>
+        <p><a href="https://www.goatcounter.com/" target="_blank" rel="noopener">GoatCounter</a> &mdash; <span data-i18n="admin.analyticsGoat">Gratuit, respectueux de la vie priv&eacute;e, sans cookies</span></p>
+        <p><a href="https://analytics.google.com/" target="_blank" rel="noopener">Google Analytics</a> &mdash; <span data-i18n="admin.analyticsGoogle">Complet, le plus utilis&eacute;</span></p>
+        <br>
+        <p data-i18n="admin.analyticsInstructions">Apr&egrave;s inscription, ajoutez le script de suivi dans le &lt;head&gt; de chaque page.</p>
+      </div>
+    </div>
+
+    <!-- Contact Tab -->
+    <div class="tab-panel" id="tab-contact">
+      <div class="placeholder-card">
+        <h3 data-i18n="admin.contactTitle">Messages re&ccedil;us</h3>
+        <p data-i18n="admin.contactDesc">Les messages envoy&eacute;s via le formulaire de contact sont g&eacute;r&eacute;s par Formspree.</p>
+        <p><a href="https://formspree.io/" target="_blank" rel="noopener" data-i18n="admin.contactLink">Acc&eacute;der au tableau de bord Formspree</a></p>
+        <br>
+        <p data-i18n="admin.contactTip">Connectez-vous avec le compte associ&eacute; au formulaire pour voir et g&eacute;rer vos messages.</p>
+      </div>
+    </div>
+
+    <!-- Content Editor Tab -->
+    <div class="tab-panel" id="tab-content">
+      <div class="lang-row">
+        <label data-i18n="admin.editLangLabel">Langue &agrave; &eacute;diter :</label>
+        <select id="content-lang-select">
+          <option value="fr">Fran&ccedil;ais</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+      <div id="content-editor-fields"></div>
+      <button class="export-btn" id="content-export" data-i18n="admin.exportBtn">Exporter i18n.js</button>
+    </div>
+  </div>
+
+  <footer>
+    <span data-i18n="footer">Soufi Soufiane &mdash; &Eacute;tudiant en BUT GEII, parcours Automatisme &amp; Informatique Industrielle.</span>
+  </footer>
+
+  <script src="../assets/js/i18n.js"></script>
+  <script src="../assets/js/lang-switcher.js"></script>
+  <script src="../assets/js/admin-auth.js"></script>
+  <script src="../assets/js/admin-dashboard.js"></script>
+  <script src="../assets/js/admin-blog.js"></script>
+</body>
+</html>
