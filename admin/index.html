@@ -221,14 +221,11 @@
 
     <!-- Analytics Tab -->
     <div class="tab-panel" id="tab-analytics">
-      <div class="placeholder-card">
-        <h3 data-i18n="admin.analyticsTitle">Statistiques du site</h3>
-        <p data-i18n="admin.analyticsSetup">Pour activer les statistiques, configurez un service d'analyse gratuit :</p>
-        <p><a href="https://www.goatcounter.com/" target="_blank" rel="noopener">GoatCounter</a> &mdash; <span data-i18n="admin.analyticsGoat">Gratuit, respectueux de la vie priv&eacute;e, sans cookies</span></p>
-        <p><a href="https://analytics.google.com/" target="_blank" rel="noopener">Google Analytics</a> &mdash; <span data-i18n="admin.analyticsGoogle">Complet, le plus utilis&eacute;</span></p>
-        <br>
-        <p data-i18n="admin.analyticsInstructions">Apr&egrave;s inscription, ajoutez le script de suivi dans le &lt;head&gt; de chaque page.</p>
-      </div>
+      <h3 data-i18n="admin.analyticsTitle">Statistiques du site</h3>
+      <p style="margin-bottom:1rem;">
+        <a href="https://soufisoufiane.goatcounter.com" target="_blank" rel="noopener" data-i18n="admin.analyticsOpen">Ouvrir le tableau de bord GoatCounter &rarr;</a>
+      </p>
+      <iframe src="https://soufisoufiane.goatcounter.com" style="width:100%;height:600px;border:1px solid var(--bg-alt);border-radius:var(--radius);background:#fff;"></iframe>
     </div>
 
     <!-- Contact Tab -->
@@ -236,7 +233,7 @@
       <div class="placeholder-card">
         <h3 data-i18n="admin.contactTitle">Messages re&ccedil;us</h3>
         <p data-i18n="admin.contactDesc">Les messages envoy&eacute;s via le formulaire de contact sont g&eacute;r&eacute;s par Formspree.</p>
-        <p><a href="https://formspree.io/" target="_blank" rel="noopener" data-i18n="admin.contactLink">Acc&eacute;der au tableau de bord Formspree</a></p>
+        <p><a href="https://formspree.io/f/xwpodpzo" target="_blank" rel="noopener" data-i18n="admin.contactLink">Acc&eacute;der au tableau de bord Formspree</a></p>
         <br>
         <p data-i18n="admin.contactTip">Connectez-vous avec le compte associ&eacute; au formulaire pour voir et g&eacute;rer vos messages.</p>
       </div>
@@ -265,5 +262,6 @@
   <script src="../assets/js/admin-auth.js"></script>
   <script src="../assets/js/admin-dashboard.js"></script>
   <script src="../assets/js/admin-blog.js"></script>
+  <script data-goatcounter="https://soufisoufiane.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
