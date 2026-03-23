@@ -52,6 +52,15 @@
       }
     }
 
+    // Translate placeholder attributes
+    var placeholders = document.querySelectorAll('[data-i18n-placeholder]');
+    for (var j = 0; j < placeholders.length; j++) {
+      var pVal = resolve(translations, placeholders[j].dataset.i18nPlaceholder, lang);
+      if (pVal !== undefined) {
+        placeholders[j].placeholder = pVal;
+      }
+    }
+
     // Update page title
     var page = document.body.dataset.page;
     if (translations.titles && translations.titles[lang] && translations.titles[lang][page]) {

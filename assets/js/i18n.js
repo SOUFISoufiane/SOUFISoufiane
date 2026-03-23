@@ -2,8 +2,8 @@
 const translations = {
   // === Navigation ===
   nav: {
-    fr: { home: "Accueil", skills: "Comp\u00e9tences", projects: "Projets", gallery: "Galerie", contact: "Contact" },
-    en: { home: "Home", skills: "Skills", projects: "Projects", gallery: "Gallery", contact: "Contact" }
+    fr: { home: "Accueil", skills: "Comp\u00e9tences", projects: "Projets", gallery: "Galerie", contact: "Contact", blog: "Blog", admin: "Admin" },
+    en: { home: "Home", skills: "Skills", projects: "Projects", gallery: "Gallery", contact: "Contact", blog: "Blog", admin: "Admin" }
   },
 
   // === Footer ===
@@ -20,7 +20,9 @@ const translations = {
       projets: "Projets | Soufi Soufiane",
       gallery: "Galerie | Soufi Soufiane",
       contact: "Contact | Soufi Soufiane",
-      minesweeper: "D\u00e9mineur | Soufi Soufiane"
+      minesweeper: "D\u00e9mineur | Soufi Soufiane",
+      blog: "Blog | Soufi Soufiane",
+      admin: "Admin | Soufi Soufiane"
     },
     en: {
       home: "Soufi Soufiane | Portfolio",
@@ -28,7 +30,9 @@ const translations = {
       projets: "Projects | Soufi Soufiane",
       gallery: "Gallery | Soufi Soufiane",
       contact: "Contact | Soufi Soufiane",
-      minesweeper: "Minesweeper | Soufi Soufiane"
+      minesweeper: "Minesweeper | Soufi Soufiane",
+      blog: "Blog | Soufi Soufiane",
+      admin: "Admin | Soufi Soufiane"
     }
   },
 
@@ -323,6 +327,86 @@ const translations = {
       labelEmail: "Email",
       labelMessage: "Message",
       submit: "Send"
+    }
+  },
+
+  // =====================
+  // BLOG PAGE
+  // =====================
+  blog: {
+    fr: {
+      pageTitle: "Blog",
+      noPosts: "Aucun article pour le moment. Revenez bient\u00f4t !"
+    },
+    en: {
+      pageTitle: "Blog",
+      noPosts: "No posts yet. Check back soon!"
+    }
+  },
+
+  // =====================
+  // ADMIN PAGE
+  // =====================
+  admin: {
+    fr: {
+      pageTitle: "Administration",
+      loginTitle: "Connexion administrateur",
+      passwordPlaceholder: "Mot de passe",
+      loginBtn: "Se connecter",
+      dashboardTitle: "Tableau de bord",
+      logout: "D\u00e9connexion",
+      tabBlog: "Blog",
+      tabAnalytics: "Analytiques",
+      tabContact: "Messages",
+      tabContent: "Contenu",
+      blogTitleLabel: "Titre de l'article",
+      blogDateLabel: "Date",
+      blogTagsLabel: "Tags (s\u00e9par\u00e9s par des virgules)",
+      blogContentLabel: "Contenu (Markdown)",
+      saveDraft: "Sauvegarder brouillon",
+      publish: "Publier (t\u00e9l\u00e9charger HTML)",
+      draftsTitle: "Brouillons",
+      analyticsTitle: "Statistiques du site",
+      analyticsSetup: "Pour activer les statistiques, configurez un service d'analyse gratuit :",
+      analyticsGoat: "Gratuit, respectueux de la vie priv\u00e9e, sans cookies",
+      analyticsGoogle: "Complet, le plus utilis\u00e9",
+      analyticsInstructions: "Apr\u00e8s inscription, ajoutez le script de suivi dans le <head> de chaque page.",
+      contactTitle: "Messages re\u00e7us",
+      contactDesc: "Les messages envoy\u00e9s via le formulaire de contact sont g\u00e9r\u00e9s par Formspree.",
+      contactLink: "Acc\u00e9der au tableau de bord Formspree",
+      contactTip: "Connectez-vous avec le compte associ\u00e9 au formulaire pour voir et g\u00e9rer vos messages.",
+      editLangLabel: "Langue \u00e0 \u00e9diter :",
+      exportBtn: "Exporter i18n.js"
+    },
+    en: {
+      pageTitle: "Administration",
+      loginTitle: "Admin Login",
+      passwordPlaceholder: "Password",
+      loginBtn: "Log in",
+      dashboardTitle: "Dashboard",
+      logout: "Log out",
+      tabBlog: "Blog",
+      tabAnalytics: "Analytics",
+      tabContact: "Messages",
+      tabContent: "Content",
+      blogTitleLabel: "Post title",
+      blogDateLabel: "Date",
+      blogTagsLabel: "Tags (comma-separated)",
+      blogContentLabel: "Content (Markdown)",
+      saveDraft: "Save draft",
+      publish: "Publish (download HTML)",
+      draftsTitle: "Drafts",
+      analyticsTitle: "Site Statistics",
+      analyticsSetup: "To enable analytics, set up a free analytics service:",
+      analyticsGoat: "Free, privacy-friendly, no cookies",
+      analyticsGoogle: "Full-featured, most popular",
+      analyticsInstructions: "After signing up, add the tracking script to the <head> of each page.",
+      contactTitle: "Received Messages",
+      contactDesc: "Messages sent through the contact form are managed by Formspree.",
+      contactLink: "Access Formspree dashboard",
+      contactTip: "Log in with the account linked to your form to view and manage messages.",
+      editLangLabel: "Language to edit:",
+      exportBtn: "Export i18n.js"
     }
   }
 };
